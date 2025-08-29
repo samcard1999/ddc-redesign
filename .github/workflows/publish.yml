@@ -1,0 +1,43 @@
+name: Publish build to build branch
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install deps
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Publish dist/ to build branch
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: build # rama destino
+          folder: dist # lo que se va a commitear
+          clean: true
+          single-commit: true
+          commit-message: "chore(ci): publish build from ${{ github.sha }}"
