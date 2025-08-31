@@ -119,7 +119,7 @@ const Cover = () => {
           The modern way to build: beautiful, resilient, and reliably on-time.
         </h2>
         <PrimaryButton className="text-primary justify-self-end bg-gray-200 bg-opacity-15">
-          Book a 30-min Intro
+          Book a 30-min Intro.
         </PrimaryButton>
       </div>
 
