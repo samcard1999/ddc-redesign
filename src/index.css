@@ -3,70 +3,76 @@
 @tailwind utilities;
 
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
+  @apply tracking-widest;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: #c2c7cf; /* Cambia el color de la fuente */
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+#root {
+  width: 100vw;
 }
-a:hover {
-  color: #535bf2;
+
+html {
+  @apply 2xl-custom:text-[1.33rem] lg:text-[0.9rem] xl:text-[0.71rem] 2xl:text-base 3xl-custom:text-[2rem];
 }
 
 body {
+  background-color: #37361c;
   margin: 0;
   display: flex;
   place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  min-width: 100vw;
+  width: 100vw;
+  min-height: 100dvh;
+  @apply text-primary;
+  overflow-x: hidden;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.cover {
+  position: relative;
+  overflow: hidden; /* asegura que el ::before no se salga */
+  --bg-y: 0vh;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.cover::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("assets/bg/cover_bg.jpeg");
+  background-size: cover;
+  background-position: center;
+  filter: brightness(30%) blur(2px);
+  transform: translate3d(0, var(--bg-y), 0) scale(1.3); /* parallax */
+  will-change: transform;
+  z-index: -1; /* detrás del contenido */
+  pointer-events: none;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+@media (max-width: 768px) {
+  .cover::before {
+    transform: translate3d(0, var(--bg-y), 0) scale(1.4); /* parallax */
   }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+}
+
+.stroke-text {
+  -webkit-text-stroke: 1px white; /* grosor y color del contorno */
+  color: transparent; /* sin relleno */
+}
+
+#header.is-solid {
+  mix-blend-mode: normal; /* deja de invertir */
+  @apply text-primary;
+}
+
+#header.is-solid svg {
+  fill: #c2c7cf;
+}
+
+#header {
+  @apply transition-colors duration-300;
 }
