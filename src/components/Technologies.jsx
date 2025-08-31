@@ -24,7 +24,7 @@ const Technologies = () => {
   return (
     <section
       id="technologies"
-      className="relative h-[100dvh] bg-[#dcdfe2] w-full px-8 text-primary isolate"
+      className="relative h-[100dvh] bg-transparent w-full px-8 text-primary isolate"
     >
       <AnimatedBackground />
       <div className="flex flex-col h-[65%] lg:h-[55%]  justify-between absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 lg:-translate-y-[10%]  w-full px-8 lg:py-8">
