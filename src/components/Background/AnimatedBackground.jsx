@@ -57,7 +57,7 @@ const AnimatedBackground = () => {
     mountEl.appendChild(renderer.domElement);
 
     // blur / brillo del canvas (solo visual)
-    mountEl.style.filter = `blur(${getBlur(w)}px) brightness(0.9)`;
+    mountEl.style.filter = `blur(${getBlur(w)}px) brightness(0.1)`;
     mountEl.style.opacity = "0.6";
 
     // Geometría / material

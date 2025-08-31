@@ -60,19 +60,36 @@ body {
 }
 
 .stroke-text {
-  -webkit-text-stroke: 1px white; /* grosor y color del contorno */
+  -webkit-text-stroke: 1px #c2c7cf; /* grosor y color del contorno */
   color: transparent; /* sin relleno */
 }
 
-#header.is-solid {
+#header.is-clear {
   mix-blend-mode: normal; /* deja de invertir */
   @apply text-primary;
 }
 
-#header.is-solid svg {
-  fill: #c2c7cf;
+#header.is-dark {
+  mix-blend-mode: normal; /* deja de invertir */
+  @apply text-secondary;
+}
+
+#header.is-clear svg {
+  @apply text-primary;
+}
+
+#header.is-dark svg {
+  @apply text-secondary;
+}
+
+.hamburger-dark {
+  @apply bg-primary;
+}
+
+.hamburger-clear {
+  @apply bg-secondary;
 }
 
 #header {
-  @apply transition-colors duration-300;
+  @apply transition-colors duration-500;
 }
