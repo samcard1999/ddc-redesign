@@ -184,7 +184,7 @@ const AnimatedBackground = () => {
         position: "absolute", // ⬅️ ocupa la sección
         inset: 0, // ⬅️ full width/height de la sección
         pointerEvents: "none",
-        zIndex: -1, // ⬅️ detrás del contenido de la sección
+        zIndex: -20, // ⬅️ detrás del contenido de la sección
         overflow: "hidden",
       }}
     />

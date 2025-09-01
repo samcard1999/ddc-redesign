@@ -11,7 +11,7 @@ const Technologies = () => {
   return (
     <section
       id="technologies"
-      className=" relative h-[100dvh] bg-primary  w-full px-8 text-primary isolate"
+      className=" relative h-screen bg-primary  w-full px-8 text-primary isolate"
     >
       <div className="absolute inset-0 -z-1 opacity-80 bg-black"></div>
       <AnimatedBackground />

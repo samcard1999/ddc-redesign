@@ -2,13 +2,13 @@ import { useLayoutEffect, useState } from "react";
 import "../src/assets/fonts/Noirden-Bold.css";
 import "../src/assets/fonts/Noirden-Regular.css";
 import "../src/assets/fonts/Noirden-Light.css";
-
 import Cover from "./components/Cover";
 import About from "./components/About";
 import ReactLenis from "lenis/react";
 import Technologies from "./components/Technologies";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from "gsap";
+import Investments from "./components/Investments";
 
 gsap.registerPlugin(ScrollTrigger);
 function App() {
@@ -38,6 +38,7 @@ function App() {
       <Cover />
       <About />
       <Technologies />
+      <Investments />
     </>
   );
 }
