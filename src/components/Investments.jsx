@@ -7,7 +7,7 @@ const Investments = () => {
   return (
     <section
       id="investments"
-      className="w-full h-auto flex flex-col justify-between bg-primary z-20 gap-12 py-32 px-8 items-center relative"
+      className="w-full h-screen flex flex-col justify-between bg-primary z-20 gap-12 py-32 px-8 items-center relative"
     >
       <div className="absolute inset-0 -z-10 opacity-80 bg-black"></div>
       <AnimatedBackground />
