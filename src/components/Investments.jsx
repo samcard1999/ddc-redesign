@@ -16,7 +16,10 @@ const Investments = () => {
           <h1 className="lg:text-5xl text-[2.1rem] lg:leading-normal leading-10 font-bold">
             Why invest with DDC Developments?
           </h1>
-          <PrimaryButton className="hidden lg:block bg-primary text-xl !py-3 !px-6 text-secondary">
+          <PrimaryButton
+            href="/investor-hub"
+            className="hidden lg:block bg-primary text-xl !py-3 !px-6 text-secondary"
+          >
             Investor Hub
           </PrimaryButton>
         </div>
@@ -24,7 +27,10 @@ const Investments = () => {
           What makes DDC different<br className="lg:hidden"></br> (construction
           - first)
         </h2>
-        <PrimaryButton className="bg-primary  mt-6 text-secondary self-center lg:hidden">
+        <PrimaryButton
+          href="/investor-hub"
+          className="bg-primary  mt-6 text-secondary self-center lg:hidden"
+        >
           Investor Hub
         </PrimaryButton>
       </div>
@@ -49,7 +55,7 @@ const Investments = () => {
             </p>
           </div>
           <div className="  lg:border-l lg:border-primary w-full h-full flex flex-col justify-center items-center relative py-6 lg:py-0">
-            <div class="lg:hidden absolute top-0 left-1/2 -translate-x-1/2 w-[85%] h-[0.5px] lg:top-1/2 lg:left-0 lg:-translate-y-1/2 lg:w-[0.5px] lg:h-[85%] bg-primary"></div>
+            <div className="lg:hidden absolute top-0 left-1/2 -translate-x-1/2 w-[85%] h-[0.5px] lg:top-1/2 lg:left-0 lg:-translate-y-1/2 lg:w-[0.5px] lg:h-[85%] bg-primary"></div>
 
             <span className="absolute top-0 lg:-top-5  right-0 -translate-y-1/2 lg:translate-y-0 translate-x-1/2 lg:translate-x-1/2 text-primary opacity-40 text-2xl lg:text-4xl">
               +

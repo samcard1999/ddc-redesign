@@ -93,3 +93,12 @@ body {
 #header {
   @apply transition-colors duration-500;
 }
+
+/* Ocultar scrollbars */
+.no-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE y Edge */
+  scrollbar-width: none; /* Firefox */
+}

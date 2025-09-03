@@ -1,0 +1,42 @@
+import React, { useEffect } from "react";
+import Cover from "./Cover";
+import About from "./About";
+import Technologies from "./Technologies";
+import Investments from "./Investments";
+import { useLocation } from "react-router-dom";
+import OurProcess from "./OurProcess";
+
+const Home = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.pathname === "/about") {
+      document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
+    } else if (location.pathname === "/investments") {
+      document
+        .getElementById("investments")
+        ?.scrollIntoView({ behavior: "smooth" });
+    } else if (location.pathname === "/technologies") {
+      document
+        .getElementById("technologies")
+        ?.scrollIntoView({ behavior: "smooth" });
+    } else if (location.pathname === "/contact") {
+      document
+        .getElementById("contact")
+        ?.scrollIntoView({ behavior: "smooth" });
+    } else {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  }, [location]);
+  return (
+    <main className="w-full h-auto">
+      <Cover />
+      <About />
+      <Technologies />
+      <Investments />
+      <OurProcess />
+    </main>
+  );
+};
+
+export default Home;

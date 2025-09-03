@@ -4,7 +4,8 @@ const Header = () => {
   return (
     <header
       id="header"
-      className="w-full h-auto fixed top-0 left-0 grid grid-cols-3 items-center p-8 z-50"
+      className="w-full h-auto fixed top-0 left-0 grid grid-cols-3 items-center p-8 z-50 backdrop-blur-sm  [mask-image:linear-gradient(to_bottom,black_60%,transparent_100%)]
+              [-webkit-mask-image:linear-gradient(to_bottom,black_60%,transparent_100%)]"
     >
       {/* Logo izquierdo */}
       <a href="/" className="cursor-pointer justify-self-start">

@@ -1,8 +1,9 @@
 import React from "react";
 
-const PrimaryButton = ({ children, onClick, className = "" }) => {
+const PrimaryButton = ({ children, onClick, className = "", href = "/" }) => {
   return (
-    <button
+    <a
+      href={href}
       onClick={onClick}
       className={`
         px-4 py-2 
@@ -19,7 +20,7 @@ const PrimaryButton = ({ children, onClick, className = "" }) => {
       `}
     >
       {children}
-    </button>
+    </a>
   );
 };
 
