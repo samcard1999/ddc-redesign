@@ -187,7 +187,7 @@ const AnimatedBackground = () => {
         zIndex: -20, // ⬅️ detrás del contenido de la sección
         overflow: "hidden",
       }}
-      className="h-[140vh]"
+      className="h-screen"
     />
   );
 };

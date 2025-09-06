@@ -5,6 +5,7 @@ import Technologies from "./Technologies";
 import Investments from "./Investments";
 import { useLocation } from "react-router-dom";
 import OurProcess from "./OurProcess";
+import TeamSection from "./Team";
 
 const Home = () => {
   const location = useLocation();
@@ -35,6 +36,7 @@ const Home = () => {
       <Technologies />
       <Investments />
       <OurProcess />
+      <TeamSection />
     </main>
   );
 };
