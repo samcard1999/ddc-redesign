@@ -1,0 +1,34 @@
+[
+
+  {
+    "number": "1",
+    "title": "Market analysis",
+    "content": "Adipisicing ex amet aliquip anim nisi laboris consectetur sunt ad est aliqua adipisicing incididunt. Duis pariatur aliquip ad cupidatat mollit eu aute. Laborum voluptate excepteur laboris ut consequat veniam exercitation excepteur do nisi excepteur. Nostrud labore qui eiusmod sint commodo anim voluptate. Ullamco pariatur Lorem magna sunt velit dolore est tempor irure sint consequat esse adipisicing.",
+    "image": "/assets/accordion/1.webp",
+    "alt": "Image representing market analysis"
+  },
+  {
+    "number": "2",
+    "title": "Financing & loan management",
+    "content": "Detalles sobre financiamiento. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "alt": "Image representing financing and loan management"
+  },
+  {
+    "number": "3",
+    "title": "Architectural project",
+    "content": "Descripción del proyecto arquitectónico. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "alt": "Image representing architectural project"
+  },
+  {
+    "number": "4",
+    "title": "Modular construction (3-4 months)",
+    "content": "Proceso de construcción modular. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "alt": "Image representing modular construction"
+  },
+  {
+    "number": "5",
+    "title": "Pre-sale & exclusive sales",
+    "content": "Información sobre preventa y ventas exclusivas. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "alt": "Image representing pre-sale and exclusive sales"
+  }
+]

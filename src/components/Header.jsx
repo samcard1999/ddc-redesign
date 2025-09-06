@@ -1,6 +1,44 @@
-import React from "react";
+import React, { useEffect } from "react";
+import gsap from "gsap";
 
 const Header = () => {
+  useEffect(() => {
+    let lastScrollY = window.scrollY;
+    let isHidden = false; // NUEVO: Estado de si el header está oculto o no
+
+    const header = document.querySelector("#header");
+
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > 600) {
+        if (currentScrollY > lastScrollY && !isHidden) {
+          // Scroll hacia abajo Y header visible -> lo ocultamos
+          gsap.to(header, { y: "-100%", duration: 0.5, ease: "ease" });
+          isHidden = true;
+        } else if (currentScrollY < lastScrollY && isHidden) {
+          // Scroll hacia arriba Y header oculto -> lo mostramos
+          gsap.to(header, { y: 0, duration: 0.5, ease: "ease" });
+          isHidden = false;
+        }
+      } else {
+        // Menos de 600px de scroll, siempre visible si estaba oculto
+        if (isHidden) {
+          gsap.to(header, { y: 0, duration: 0.3, ease: "power2.out" });
+          isHidden = false;
+        }
+      }
+
+      lastScrollY = currentScrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <header
       id="header"

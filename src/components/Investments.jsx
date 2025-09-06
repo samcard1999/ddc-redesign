@@ -75,7 +75,7 @@ const Investments = () => {
         <div className="hidden lg:block w-full bg-primary h-[0.5px]"></div>
         <div className="lg:flex-row flex flex-col">
           <div className="w-full h-full flex flex-col justify-center items-center relative py-6 lg:py-0">
-            <div class="lg:hidden absolute top-0 left-1/2 -translate-x-1/2 w-[85%] h-[0.5px] lg:top-1/2 lg:left-0 lg:-translate-y-1/2 lg:w-[0.5px] lg:h-[85%] bg-primary"></div>
+            <div className="lg:hidden absolute top-0 left-1/2 -translate-x-1/2 w-[85%] h-[0.5px] lg:top-1/2 lg:left-0 lg:-translate-y-1/2 lg:w-[0.5px] lg:h-[85%] bg-primary"></div>
 
             <span className="absolute top-0 lg:-top-5 left-0 -translate-x-1/2 lg:-translate-x-1/2 -translate-y-1/2 lg:translate-y-0 text-primary opacity-40 text-2xl lg:text-4xl">
               +
@@ -92,7 +92,7 @@ const Investments = () => {
             </p>
           </div>
           <div className="  lg:border-l lg:border-primary w-full h-full flex flex-col justify-center items-center relative py-6 lg:py-0">
-            <div class="lg:hidden absolute top-0 left-1/2 -translate-x-1/2 w-[85%] h-[0.5px] lg:top-1/2 lg:left-0 lg:-translate-y-1/2 lg:w-[0.5px] lg:h-[85%] bg-primary"></div>
+            <div className="lg:hidden absolute top-0 left-1/2 -translate-x-1/2 w-[85%] h-[0.5px] lg:top-1/2 lg:left-0 lg:-translate-y-1/2 lg:w-[0.5px] lg:h-[85%] bg-primary"></div>
 
             <span className="absolute top-0 lg:-top-5  right-0 -translate-y-1/2 lg:translate-y-0 translate-x-1/2 lg:translate-x-1/2 text-primary opacity-40 text-2xl lg:text-4xl">
               +
