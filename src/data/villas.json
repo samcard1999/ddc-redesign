@@ -77,8 +77,8 @@
   {
     "id": 4,
     "name": "Villa Oceania",
-  "total_images": null,
-  "folder": null,
+  "total_images": 23,
+  "folder": "Villa_Oceania",
     "shortName": "Oceania",
     "address": "370 Santander Ct, Punta Gorda, FL 33950",
     "city": "Punta Gorda",
@@ -95,7 +95,7 @@
     "construction": "Concrete block construction",
     "floor_types": ["Ceramic floor", "Tile floors"],
     "price": null,
-    "image": null,
+    "image": "/assets/images/Villa_Oceania/2.jpg",
     "description" : null
   },
   {
@@ -126,8 +126,8 @@
   {
     "id": 6,
     "name": "Villa Nacho",
-  "total_images": null,
-  "folder": null,
+  "total_images": 25,
+  "folder": "Villa_Nacho",
     "shortName": "Nacho",
     "address": "1891 Latham Dr, Lehigh Acres, FL 33972",
     "city": "Lehigh Acres",
@@ -144,7 +144,7 @@
     "construction": "Concrete block construction",
     "floor_types": ["Ceramic floor", "Tile floors"],
     "price": null,
-    "image": null,
+    "image": "/assets/images/Villa_Nacho/3.jpg",
     "description" : null
   },
   {
@@ -409,8 +409,8 @@
   {
     "id": 17,
     "name": "Villa Penate",
-  "total_images": null,
-  "folder": null,
+  "total_images": 24,
+  "folder": "Villa_Penate",
     "shortName": "Penate",
     "address": "1415 Grebe Dr, Punta Gorda, FL 33950",
     "city": "Punta Gorda",
@@ -427,7 +427,7 @@
     "construction": "Concrete block construction",
     "floor_types": ["Ceramic floor", "Tile floors"],
     "price": null,
-    "image": null,
+    "image": "/assets/images/Villa_Penate/2.jpg",
     "description" : null
   },
   {
@@ -458,8 +458,8 @@
   {
     "id": 19,
     "name": "Villa Tortuga",
-  "total_images": null,
-  "folder": null,
+  "total_images": 23,
+  "folder": "Villa_Tortuga",
     "shortName": "Tortuga",
     "address": "3736 Turtle Dove Blvd, Punta Gorda, FL 33950",
     "city": "Punta Gorda",
@@ -476,7 +476,7 @@
     "construction": "Concrete block construction",
     "floor_types": ["Ceramic floor", "Tile floors"],
     "price": null,
-    "image": null,
+    "image": "/assets/images/Villa_Tortuga/3.jpg",
     "description" : null
   }
 ]
