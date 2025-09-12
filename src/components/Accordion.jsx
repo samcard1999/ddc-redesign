@@ -103,8 +103,8 @@ const Accordion = ({ onOpenChange, isDark }) => {
               }`}
             >
               <img
-                className="h-80 lg:ml-[20vw] "
-                src="/assets/accordion/1.webp"
+                className="lg:h-80 lg:ml-[20vw] object-cover h-full"
+                src={item.image}
                 alt={`${item.alt}`}
               />
 
