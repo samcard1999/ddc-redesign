@@ -164,7 +164,7 @@ const Header = ({ className }) => {
           </h2>
           <button
             ref={openMenuRef}
-            className="font-bold text-lg bg-transparent"
+            className="font-bold text-lg bg-transparent lg:hover:text-primary/65 transition-colors duration-200"
           >
             <span className="sr-only">Menu</span>
             <svg
@@ -248,10 +248,9 @@ const Header = ({ className }) => {
             <div className="overflow-hidden">
               <div className="nav_items">
                 <HoverAnimatedLink
-                  link={true}
-                  text={t("main_menu.about")}
+                  text={"Home"}
                   smooth
-                  to="/#about"
+                  href="/"
                   className="close_menu"
                 />
               </div>
@@ -259,9 +258,18 @@ const Header = ({ className }) => {
             <div className="overflow-hidden">
               <div className="nav_items">
                 <HoverAnimatedLink
-                  link={true}
+                  text={t("main_menu.team")}
+                  smooth
+                  href="/team"
+                  className="close_menu"
+                />
+              </div>
+            </div>
+            <div className="overflow-hidden">
+              <div className="nav_items">
+                <HoverAnimatedLink
                   text={t("main_menu.investments")}
-                  to={"/investments"}
+                  href={"/investor-hub"}
                   className="close_menu"
                 />
               </div>
@@ -269,10 +277,9 @@ const Header = ({ className }) => {
             <div className="overflow-hidden">
               <div className="nav_items">
                 <HoverAnimatedLink
-                  link={true}
                   text={t("main_menu.projects")}
                   smooth
-                  to="/#projects"
+                  href="/projects"
                   className="close_menu"
                 />
               </div>
@@ -280,10 +287,9 @@ const Header = ({ className }) => {
             <div className="overflow-hidden">
               <div className="nav_items">
                 <HoverAnimatedLink
-                  link={true}
                   text={t("main_menu.technologies")}
                   smooth
-                  to="/#technologies"
+                  href="/technologies"
                   className="close_menu"
                 />
               </div>
@@ -291,9 +297,8 @@ const Header = ({ className }) => {
             <div className="overflow-hidden">
               <div className="nav_items">
                 <HoverAnimatedLink
-                  link={true}
                   text={t("main_menu.contact")}
-                  to="/contact"
+                  href="/#contact"
                   className="close_menu"
                 />
               </div>

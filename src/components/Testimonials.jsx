@@ -156,8 +156,8 @@ const Testimonials = () => {
           </Swiper>
         </div>
       </div>
-      <PrimaryButton className="text-primary bg-secondary text-xl !px-8 !py-3">
-        Subscribe
+      <PrimaryButton className="text-primary bg-secondary text-xl !px-8 !py-3 hover:bg-secondary/50 hover:!text-secondary">
+        Subscribe to our Newsletter
       </PrimaryButton>
       <Footer className="text-secondary" />
     </section>

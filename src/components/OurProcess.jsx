@@ -52,15 +52,19 @@ const OurProcess = () => {
 
       {/* Header */}
       <div className="flex flex-col px-8 w-full gap-4 justify-start items-start 2xl-custom:absolute 2xl-custom:left-0 2xl-custom:top-32 2xl-custom:px-8 2xl:relative 2xl:inset-auto 2xl:px-0">
-        <div className="flex w-full justify-between items-center">
-          <h1 className="lg:text-5xl text-[2.1rem] lg:leading-normal leading-10 font-bold text-secondary">
+        <div className="flex w-full justify-between items-center px-8">
+          <h1
+            className="lg:text-5xl text-[2.1rem] lg:leading-normal leading-10 font-bold text-secondary hover:bg-secondary/50
+          hover:text-secondary"
+          >
             Our Process
           </h1>
 
           {/* Botón desktop */}
           <PrimaryButton
             href="/investor-hub"
-            className="hidden lg:block text-xl !py-3 !px-6 bg-secondary text-primary"
+            className="hidden lg:block text-xl !py-3 !px-6 bg-secondary text-primary hover:bg-secondary/50
+          hover:!text-secondary"
           >
             Investor Hub
           </PrimaryButton>

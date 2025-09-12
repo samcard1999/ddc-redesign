@@ -212,9 +212,7 @@ export default function ProjectDetails() {
           >
             <AnimatePresence mode="popLayout">
               {[...Array(project.total_images)].map((_, index) => {
-                const isRightEdgeLg =
-                  isLg &&
-                  ((index + 1) % 3 === 0 || index === filtered.length - 1);
+                const isRightEdgeLg = isLg && (index + 1) % 3 === 0;
 
                 return (
                   <motion.article

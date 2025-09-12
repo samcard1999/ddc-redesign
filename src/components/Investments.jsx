@@ -145,7 +145,7 @@ const Investments = () => {
           </h1>
           <PrimaryButton
             href="/investor-hub"
-            className="top-btn hidden lg:block bg-primary text-xl !py-3 !px-6 text-secondary"
+            className="top-btn hidden lg:block bg-primary text-xl !py-3 !px-6 text-secondary hover:text-primary"
           >
             Investor Hub
           </PrimaryButton>
@@ -156,7 +156,7 @@ const Investments = () => {
         </h2>
         <PrimaryButton
           href="/investor-hub"
-          className="mobile-btn bg-primary mt-6 text-secondary self-center lg:hidden"
+          className="mobile-btn bg-primary mt-6 text-secondary self-center lg:hidden hover:text-primary"
         >
           Investor Hub
         </PrimaryButton>

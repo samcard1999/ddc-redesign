@@ -269,7 +269,7 @@ const Projects = () => {
       >
         <PrimaryButton
           href="/projects"
-          className="bg-secondary font-normal !px-4 !py-4 text-lg text-primary "
+          className="bg-secondary font-normal !px-4 !py-4 text-lg  hover:text-secondary"
         >
           View All Projects
         </PrimaryButton>
@@ -281,7 +281,9 @@ const Projects = () => {
       >
         <PrimaryButton
           href="/projects"
-          className="bg-secondary font-normal !px-4 !py-4 text-lg text-primary "
+          className="bg-secondary font-bold !px-4 !py-4 text-lg text-primary
+          hover:bg-secondary/50
+          hover:text-secondary"
         >
           View All Projects
         </PrimaryButton>

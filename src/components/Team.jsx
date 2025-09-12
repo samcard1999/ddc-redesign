@@ -91,7 +91,7 @@ export default function TeamSection({}) {
         className="z-50 bg-primary text-secondary text-lg absolute top-32  
         border border-primary rounded-full font-bold tracking-wide 
         hover:bg-white/10 transition-all duration-300 w-fit h-fit
-        !px-10 !py-3 left-1/2 -translate-x-1/2"
+        !px-10 !py-3 left-1/2 -translate-x-1/2 hover:text-primary"
         onClick={() => setMode((m) => (m === "team" ? "culture" : "team"))}
       >
         {isTeam ? "Our Culture" : "Team"}
@@ -334,7 +334,7 @@ export default function TeamSection({}) {
                 <div className="relative w-full aspect-[9/16] h-full overflow-hidden">
                   <video
                     className="absolute inset-0 w-full h-full object-cover"
-                    src="assets/video/our-culture.mp4" // ajusta la ruta si es necesario
+                    src="/assets/video/our-culture.mp4" // ajusta la ruta si es necesario
                     autoPlay
                     muted
                     loop

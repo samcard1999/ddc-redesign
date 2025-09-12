@@ -7,7 +7,7 @@ import { Autoplay } from "swiper/modules";
 import "swiper/css";
 
 export default function OurCultureMobile({
-  videoSrc = "assets/videos/hero.mp4",
+  videoSrc = "/assets/video/our-culture.mp4",
   items = ourCulture,
   className = "",
 }) {

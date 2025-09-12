@@ -6,6 +6,7 @@ const HoverAnimatedLink = ({
   text,
   className = "",
   link = false,
+  href = "",
   ...props
 }) => {
   const [isActive, setIsActive] = useState(false);
@@ -46,7 +47,7 @@ const HoverAnimatedLink = ({
   ) : (
     <a
       {...props}
-      onClick={handleToggle}
+      href={href}
       className={`relative inline-block overflow-hidden group ${className}`}
     >
       <span

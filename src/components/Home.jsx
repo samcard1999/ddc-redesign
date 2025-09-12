@@ -48,7 +48,7 @@ const Home = () => {
       {isDesktop ? (
         ""
       ) : (
-        <OurCultureMobile videoSrc="assets/video/our-culture.mp4" />
+        <OurCultureMobile videoSrc="/assets/video/our-culture.mp4" />
       )}
       <Testimonials />
     </main>
