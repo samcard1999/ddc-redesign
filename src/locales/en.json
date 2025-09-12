@@ -1,0 +1,200 @@
+{
+  "slogan": "<0>Designing</0> the future, <1/> <0>Building</0> a Legacy",
+  "about": "About us",
+  "contact":"Contact",
+  "menu": "Menu",
+  "technologies": "Technologies",
+  "team": "Team",
+  "projects": "Projects",
+  "about_title": "The future <0/> is not <0/> Waited",
+  "about_title_mobile": "The future is <0/> not Waited, it is <1/> built",
+  "about_text": "At DDC Developments, we are dedicated to transforming the construction industry with a strong commitment to environmental responsibility. By leveraging cutting- edge technologies like our modular systems, we offer innovative and sustainable solutions that redefine efficiency and performance. Our disruptive approach positions us as an industry leader, driving progress and shaping the future of construction.",
+  "modular_construction_grid":"<0>Modular construction</0> with<1/> power to manufacture <2/> <0>properties</0> <3/> per day",
+  "manufacture_grid":"<0>Manufacture facility </0><1/>  in Florida",
+  "properties_grid" :"More than <0/> <1>properties</1>",
+  "investments_grid": "Investments in projects",
+  "start_investment_grid": "Start your new <0/>investment now",
+  "explore_projects": "Explore some of our projects",
+  "convert_projects": "We convert designs into reality through innovative the modular construction method.",
+  "all_cases_button": "See all cases",
+  "market_analysis": "Market <0/> analysis",
+  "financing": "Financing and loan management",
+  "architectural_project": "Architectural Project",
+  "modular_construction": "  Modular construction 3-4<0/> months",
+  "presale": "Pre-sale and exclusivity for sale",
+  "our_process": "Our <0/> <1>Process</1>",
+  "our_areas": "Our Areas <0/> and <1>Technologies</1>",
+  "modular_system_accordion_title":"Modular System",
+  "ar_accordion_title":"Augmented Reality",
+  "bim_accordion_title": "BIM Software",
+  "tokenization_accordion_title":"Real Estate tokenization",
+  "ddc_app_accordion_title":"The DDC App",
+
+  "modular_system_accordion": "At DDC, we rely on a cutting-edge modular construction system that allows for faster execution, greater precision, and superior quality. By using prefabricated components, we streamline the building process and reduce environmental impact—transforming how real estate projects are developed across Florida.",
+  "ar_accordion":"We use Augmented Reality to offer immersive project previews, allowing clients and investors to visualize spaces before construction begins. This technology improves decision-making and creates a stronger emotional connection with every property.",
+  "bim_accordion": "Through BIM (Building Information Modeling), DDC guarantees project accuracy, cost control, and streamlined collaboration. This digital model centralizes architectural, structural, and MEP data—ensuring a smarter, more transparent construction process.",
+  "tokenization_accordion":"We’re pioneering real estate tokenization to democratize access to investment. By converting property value into digital tokens, we make it easier for global investors to participate with transparency, liquidity, and lower entry barriers.",
+  "ddc_app_accordion":"Our mobile app empowers investors to track progress, manage documents, and monitor returns—all in real-time. It’s your direct line to every DDC project, designed to make property investment simple, secure, and accessible.",
+  "our_team": "Our <0>Team</0>",
+  "team_members": {
+    "danilo_dominguez": {
+      "role": "CEO and Founder",
+      "description": "Our CEO, Danilo Dominguez, has been dedicating his life to better understanding how we can better connect all real estate industries. From Real Estate Brokerage to Residential & Commercial construction. For him, it's all about the clients' experiences."
+    },
+    "danilo_dominguez_catasus": {
+      "role": "Chief Operating Officer",
+      "description": "A veteran builder, Danilo turns strategy into flawless execution. He fine-tunes procurement, scheduling, and on-site workflows so our modular builds rise faster and safer. His hands-on leadership safeguards cost, quality, and compliance, delivering the operational excellence clients and investors expect from DDC."
+    },
+    "israel_gonzalez": {
+      "role": "Senior Business Developer",
+      "description": "Israel opens new doors for DDC. With keen market insight and an investor-first mindset, he scouts opportunities, negotiates strategic partnerships, and builds pipelines that fuel our modular projects. His blend of financial acumen and relationship savvy turns prospects into long-term collaborators who share DDC’s vision."
+    },
+    "yiseny_anzola": {
+      "role": "Sales Director",
+      "description": "Yiseny turns interest into ownership. Grounded in Miami’s fast-moving market, she guides buyers and investors from first inquiry to closing, making every step clear and efficient. Her proactive approach and personable style ensure each transaction reflects the distinction, prestige, and quality that define DDC."
+    },
+    "alejandro_fonticoba": {
+      "role": "Project Manager",
+      "description": "Alejandro keeps every DDC build on track. From permitting to punch-list, he aligns architects, engineers, and trades, tracking costs and milestones so modules arrive and assemble without delays. His rigorous oversight safeguards budgets and ensures DDC’s signature quality reaches the site as designed."
+    },
+    "alex_olivares": {
+      "role": "Senior General Contractor",
+      "description": "Alex is the on‑site force behind DDC’s precision builds. Drawing on deep field experience, he orchestrates crews, suppliers, and safety protocols so our modular structures rise flawlessly. His eye for detail and proactive problem‑solving keep timelines tight and quality uncompromised—delivering the craft clients expect."
+    },
+    "javi_ferrer": {
+      "role": "Marketing & Brand Director",
+      "description": "Javi turns ideas into stories people remember. Using clear data and fresh creativity, he builds campaigns that show why DDC’s modular projects stand out. From a social-post to an investor pitch, he keeps every detail polished so clients and partners feel the distinction and quality that define DDC."
+    },
+    "alejandra_rosas": {
+      "role": "Loan Processor",
+      "description": "Alejandra plays a key role in ensuring the financial backbone of each project runs smoothly. With deep knowledge of loan documentation and regulatory processes, she supports our clients and internal teams to streamline approvals and secure reliable financing. Her precision and dedication help bring DDC projects to life with confidence and clarity."
+    },
+    "juan_sebastian": {
+      "role": "Transaction Coordinator",
+      "description": "Juan ensures every real estate transaction runs smoothly from start to finish. With strong attention to detail and client coordination, he bridges the gap between contracts, timelines, and closing processes. His commitment to clarity and execution makes him a key player in delivering seamless deals at DDC."
+    },
+    "stephanie_parra": {
+      "role": "Account Manager",
+      "description": "Stephanie is the link between our clients and the full execution of every project. As Account Manager, she ensures communication is fluid, expectations are clear, and every step of the process is aligned with our client’s goals. Her proactive approach and strategic mindset help strengthen long-term relationships and guarantee satisfaction at every stage."
+    },
+    "lorena_ardila": {
+      "role": "Marketing Planner",
+      "description": "Lorena leads the strategic coordination of our marketing efforts, ensuring every campaign aligns with DDC’s vision and brand identity. With a sharp eye for planning and a deep understanding of audience dynamics, she transforms ideas into structured actions that drive visibility, positioning, and growth. Her work connects every message with purpose."
+    },
+    "wilfredo_alvarado": {
+      "role": "Creative Director",
+      "description": "Wilfredo turns concepts into immersive realities. As the mind behind DDC’s photorealistic renders, augmented-reality previews, and graphic identity, he lets clients walk through a project—feel its light, materials, and flow—long before construction begins, elevating every decision with clarity, beauty, and technical precision."
+    }
+  },
+   "footer": {
+    "title": "Get in Touch",
+    "subtitle": "Contact us today",
+    "description": "Make an exclusive appointment to discover our company and philosophy.",
+    "name": "Name",
+    "email": "Email address",
+    "phone": "Phone number",
+    "findUs": "How did you find us?",
+    "reason": "Reasons for investing with us:",
+    "reasonPlaceholder": "-- Select a reason --",
+    "message": "Message",
+    "acceptPolicy": "I accept the ",
+    "privacyPolicy":"Privacy Policy",
+    "sending":"Sending",
+    "emailPlaceHolder": "youremail@example.com",
+    "messagePlaceHolder":"Write your Message...",
+    "send": "Send",
+    "emailLabel": "E-mail",
+    "hoursLabel": "Hours",
+    "hoursValue": "Monday–Friday 9:00am – 6:00pm",
+    "socialLabel": "Social Media",
+    "addressLabel": "Address"
+    
+  },
+  "contact_reasons": {
+    "collaboration": "Collaboration opportunities",
+    "inquiries": "General inquiries",
+    "business": "Business proposals",
+    "other": "Other"
+  },
+   "validation": {
+    "username_min": "Username must be at least 2 characters.",
+    "email_invalid": "Invalid email address.",
+    "email_min": "Please enter a valid email address.",
+    "phone_min": "Phone number must be at least 6 digits.",
+    "findUs_min": "Please let us know how you found us.",
+    "investingWithUs_min": "Please select at least one option.",
+    "message_min": "Please write a message.",
+    "terms_required": "You must accept the terms and policies"
+  },
+  "form_send": {
+    "success_title":"Form send",
+    "success":"Thanks, we'll be in touch.",
+    "fail_title":"Error sending form"
+  },
+
+  "projectDetails": {
+    "Villa_Victor": {
+      "distribution": "5 Beds ● 5 Baths",
+      "description": "Villa Victor blends sleek architecture with tropical serenity. Its dark exterior contrasts with warm wood accents, creating a bold, modern look. Inside, open living spaces and natural light define a refined lifestyle, while the private pool deck offers an inviting escape—designed for both relaxation and entertaining."
+    },
+    "Villa_Santa_Marta": {
+      "distribution": "4 Beds ● 5 Baths",
+      "description": "This modern home seamlessly blends bold architectural design with natural elements. The façade combines concrete and wood, harmonizing with lush surroundings for a balanced, elegant look. Inside, open spaces with marble finishes, natural wood tones, and ample light create a serene atmosphere, prioritizing comfort, functionality, and connection to nature."
+    },
+    "Villa_Ochoa": {
+      "distribution": "4 Beds ● 4 Baths",
+      "description": "Villa Ochoa combines minimalist architecture with natural elegance. The exterior’s clean lines and earthy tones integrate seamlessly with lush surroundings, while expansive windows invite natural light inside. The open plan interior, featuring marble accents and warm wood, fosters comfort and sophistication, creating a harmonious balance between modern design and serene living."
+    },
+    "Villa_Esplanade": {
+      "distribution": "4 Beds ● 5 Baths",
+      "description": "Villa Esplanade blends waterfront tranquility with modern minimalism. Nestled in lush Miami greenery, this one story home celebrates horizontal lines, warm textures, and open plan elegance where architecture meets serenity."
+    },
+    "Villa_Guajira": {
+      "distribution": "8 Beds ● 6 Baths",
+      "description": "Villa Guajira is a modern duplex in Miami, offering clean lines, warm textures, and tropical landscaping. Its design blends indoor-outdoor living with private pools, luxurious interiors, and a serene, contemporary ambiance. Perfect for elegant urban lifestyles."
+    },
+    "Villa_Tortuga": {
+      "distribution": "4 Beds ● 4 Baths",
+      "description": "Contemporary elegance meets tropical serenity. This waterfront residence blends minimalist interiors with warm textures, expansive windows, and seamless outdoor living—designed to elevate comfort, light, and luxury under the Florida sun."
+    },
+    "Villa_Barranquilla": {
+      "distribution": "4 Beds ● 4 Baths",
+      "description": "Villa Barranquilla merges contemporary architecture with natural warmth. The façade features bold lines and wooden accents, blending seamlessly with lush greenery. Inside, open layouts with soft tones, wooden textures, and abundant natural light create a harmonious space that balances elegance and comfort, perfect for modern living."
+    },
+    "button":"See Portfolio"
+  },
+
+   "ddc_investment": {
+    "title": "Why Invest with DDC <0/> Developments?",
+    "button": "Make an Appointment",
+    "lower_costs": {
+
+      "text": "Lower Costs – Maximized ROI"
+    },
+    "faster_returns": {
+      "title": "Faster <0>Returns</0>",
+      "img": "faster_returns.svg"
+    },
+    "structural_strength": {
+      "text": "Proven <0>Structural Strength</0> Durable, reliable assets"
+    },
+    "flexible_investor": {
+      "title": "Smart, Scalable Entry <0></0> Points",
+      "subtitle": "Flexible investor models",
+      "img": "flexible_investor_en.svg"
+    },
+    "eco_friendly": {
+      "title": "Eco-Conscious Construction",
+      "text": "100% recyclable materials"
+    },
+    "appointment_now": "Make an appointment now"
+  },
+  "main_menu": {
+    "about": "About",
+    "technologies": "Technologies",
+    "contact": "Contact",
+    "investments": "Investments",
+    "projects": "Projects"
+  }
+
+}
