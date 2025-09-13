@@ -341,8 +341,8 @@ const TechnologiesInside = () => {
       >
         <div className="flex-1 panel-item w-full overflow-hidden relative">
           <img
-            className="object-cover absolute inset-0 w-full flex-1"
-            src="/assets/technologies/1.jpg"
+            className="object-cover absolute inset-0 h-full flex-1"
+            src="/assets/technologies/wall.webp"
             alt="Wall Panels Technology"
           />
           <div className="bg-secondary flex flex-col justify-center items-start px-4 absolute w-full py-2 lg:py-0 lg:h-[15%] bottom-0 left-0 lg:border-r lg:border-primary/20">
@@ -356,7 +356,7 @@ const TechnologiesInside = () => {
         <div className="flex-1 panel-item w-full overflow-hidden relative">
           <img
             className="object-cover absolute inset-0 w-full h-full flex-1"
-            src="/assets/technologies/2.jpg"
+            src="/assets/technologies/roof.webp"
             alt="Roof Panels Technology"
           />
           <div className="bg-secondary flex justify-center items-start flex-col px-4 absolute w-full py-2 lg:py-0 lg:h-[15%] bottom-0 left-0 lg:border-r lg:border-primary/20">
@@ -368,8 +368,8 @@ const TechnologiesInside = () => {
         </div>
         <div className="flex-1 panel-item w-full overflow-hidden relative">
           <img
-            className="object-cover absolute inset-0 w-full flex-1"
-            src="/assets/technologies/3.jpg"
+            className="object-cover absolute inset-0 h-full flex-1"
+            src="/assets/technologies/floor.webp"
             alt="Floor Panels Technology"
           />
           <div className="bg-secondary flex justify-center items-start flex-col px-4 absolute w-full py-2 lg:py-0 lg:h-[15%] bottom-0 left-0">
