@@ -208,6 +208,7 @@ const Projects = () => {
               <img
                 src={s.image}
                 alt={s.title}
+                loading="lazy"
                 className="slide-content-img w-full h-full object-cover"
               />
             </div>

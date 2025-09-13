@@ -6,6 +6,7 @@ const PrimaryButton = ({ children, onClick, className = "", href = "/" }) => {
       href={href}
       onClick={onClick}
       className={`
+        ${className}
         px-4 py-2 
         border border-primary 
         rounded-full       
@@ -16,7 +17,6 @@ const PrimaryButton = ({ children, onClick, className = "", href = "/" }) => {
         duration-300
         w-fit
         h-fit
-        ${className}
       `}
     >
       {children}

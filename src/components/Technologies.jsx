@@ -5,6 +5,7 @@ import PrimaryButton from "./buttons/PrimaryButton";
 import AnimatedBackground from "./Background/AnimatedBackground";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SplitText from "gsap/SplitText";
+import CountUpOnVisible from "./helpers/CountUpOnVisible";
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
@@ -131,7 +132,15 @@ const Technologies = () => {
             <span className="absolute -top-5 right-0 lg:right-full lg:bottom-0 lg:top-auto translate-x-1/2 -translate-y-1/2 lg:translate-y-0 text-primary opacity-40 text-2xl lg:text-3xl">
               +
             </span>
-            <h2 className="text-3xl lg:text-4xl font-bold">200+</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold">
+              <CountUpOnVisible
+                prefix={""}
+                suffix="+"
+                start={100}
+                end={200}
+                duration={3}
+              />
+            </h2>
             <h3 className="opacity-60 text-xs lg:text-sm">
               mph wind Engineering
             </h3>
@@ -158,7 +167,15 @@ const Technologies = () => {
             </span>
 
             {/* Contenido */}
-            <h2 className="text-3xl lg:text-4xl font-bold">~30%</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold">
+              <CountUpOnVisible
+                prefix={"~"}
+                suffix="%"
+                start={10}
+                end={30}
+                duration={3}
+              />
+            </h2>
             <h3 className="opacity-60 text-xs lg:text-sm">lower build costs</h3>
           </div>
           <div className="metric-block flex flex-col justify-center items-center w-full relative pb-7 lg:pb-0">
@@ -168,7 +185,23 @@ const Technologies = () => {
             <span className="absolute -bottom-6 right-0 translate-x-1/2 -translate-y-1/2 lg:translate-y-0 lg:bottom-0 text-primary opacity-40 text-2xl lg:text-3xl">
               +
             </span>
-            <h2 className="text-3xl lg:text-4xl font-bold">60-70%</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold">
+              {" "}
+              <CountUpOnVisible
+                prefix={""}
+                suffix=""
+                start={30}
+                end={60}
+                duration={3}
+              />
+              <CountUpOnVisible
+                prefix={"-"}
+                suffix="%"
+                start={40}
+                end={70}
+                duration={3}
+              />
+            </h2>
             <h3 className="opacity-60 text-xs lg:text-sm">faster schedules</h3>
           </div>
         </div>
