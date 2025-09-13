@@ -1,8 +1,6 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { ChevronDown } from "lucide-react";
 import AnimatedBackground from "./Background/AnimatedBackground";
-import PrimaryButton from "./buttons/PrimaryButton";
 import Footer from "./Footer";
 import members from "../data/team.json";
 import culture from "../data/ourCulture.json";
@@ -277,6 +275,7 @@ export default function TeamSection({}) {
                       } w-full aspect-square object-cover object-top `}
                       src={active.image}
                       alt={active.name}
+                      loading="lazy"
                       initial={{ opacity: 0, scale: 1.03, y: 8 }}
                       animate={{ opacity: 1, scale: 1, y: 0 }}
                       exit={{ opacity: 0, scale: 0.98, y: -8 }}

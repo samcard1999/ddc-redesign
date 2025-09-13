@@ -106,6 +106,7 @@ const Accordion = ({ onOpenChange, isDark }) => {
                 className="lg:h-80 lg:ml-[20vw] object-cover h-full w-[75vw] lg:w-auto"
                 src={item.image}
                 alt={`${item.alt}`}
+                loading="lazy"
               />
 
               <div

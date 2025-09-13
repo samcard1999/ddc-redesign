@@ -101,7 +101,7 @@
   {
     "id": 5,
     "name": "Villa Oasis",
-  "total_images": 36,
+  "total_images": 24,
   "folder": "Villa_Oasis",
     "shortName": "Oasis",
     "address": "16376 Perico Way, Punta Gorda, FL 33955",
@@ -119,7 +119,7 @@
     "construction": "Concrete block construction",
     "floor_types": ["Ceramic floor", "Tile floors"],
     "price": "$3.99 M",
-    "image": "/assets/images/Villa_Oasis/2.jpg",
+    "image": "/assets/images/Villa_Oasis/3.jpg",
      "description": "A waterfront tropical modern residence in Florida. Dark stucco and warm wood pair with generous glass and clean roof lines, opening to serene interiors with an open kitchen, spa baths, and curated lighting. A pool terrace, lounge deck, and a private dock deliver calm living with timeless sophistication."
 
   },
