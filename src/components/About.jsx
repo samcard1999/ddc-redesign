@@ -185,12 +185,12 @@ const About = () => {
           </span>
 
           <p className="relative text-sm lg:text-lg lg:max-w-[99%]">
-            At DDC Developments, we are dedicated to transforming the
-            construction industry with a strong commitment to environmental
-            responsibility. By leveraging cutting-edge technologies like our
-            modular systems, we offer innovative and sustainable solutions that
-            redefine efficiency and performance. Our disruptive approach
-            positions us as an industry leader, driving progress and shaping the
+            DDC Developments is transforming construction with a steadfast
+            commitment to environmental responsibility. We deploy cutting-edge
+            technologies including modular systems from our partners’ facilities
+            in Florida to deliver innovative, sustainable solutions that
+            redefine efficiency and performance; this partnership-driven,
+            disruptive approach positions us as an industry leader shaping the
             future of construction.
           </p>
         </div>

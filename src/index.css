@@ -47,10 +47,10 @@ img:not([src$=".svg"], [src$=".png"]) {
   content: "";
   position: absolute;
   inset: 0;
-  @apply md:bg-[url("/bg/bg.webp")] bg-[url("/bg/bg_mobile.webp")];
-  background-size: cover;
+  @apply md:bg-[url("/bg/bg.webp")] bg-[url("/bg/bg_mobile.jpg")];
+  background-size: contain;
   background-position: center;
-  filter: brightness(30%);
+  filter: brightness(35%);
   transform: translate3d(0, var(--bg-y), 0) scale(1.3); /* parallax */
   will-change: transform;
   z-index: -1; /* detrás del contenido */
@@ -59,7 +59,7 @@ img:not([src$=".svg"], [src$=".png"]) {
 
 @media (max-width: 768px) {
   .cover::before {
-    transform: translate3d(0, var(--bg-y), 0) scale(1.4); /* parallax */
+    transform: translate3d(20%, var(--bg-y), 0) scale(1.4); /* parallax */
   }
 }
 

@@ -246,7 +246,7 @@ export default function ProjectDetails() {
                         alt={`Slide ${index + 1}`}
                         loading="lazy"
                         decoding="async"
-                        className="h-[180px] sm:h-[200px] md:h-[220px] lg:aspect-video lg:h-full w-full object-cover"
+                        className="h-[180px] sm:h-[200px] md:h-[220px] lg:aspect-video lg:h-full w-full object-contain"
                       />
                     </div>
                   </motion.article>

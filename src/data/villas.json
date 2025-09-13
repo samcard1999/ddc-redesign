@@ -21,7 +21,7 @@
     "floor_types": ["Ceramic floor", "Tile floors"],
     "price": "$650 K",
     "image": "/assets/images/Villa_Anzola/6.jpg",
-    "description": "A bespoke architectural gem in Miami. This refined tropical residence blends natural elegance with contemporary design, offering an exclusive living experience where every detail is crafted for distinction, comfort, and timeless sophistication."
+    "description": "A bespoke architectural retreat in Lehigh Acres, Florida. This refined tropical home pairs natural textures with contemporary lines and generous outdoor living, offering an exclusive experience where every detail is crafted for distinction, comfort, and timeless sophistication."
 
   },
   {
@@ -46,7 +46,7 @@
     "floor_types": ["Ceramic floor", "Tile floors"],
     "price": "$675 K",
     "image": "/assets/images/Villa_Maria/1.jpg",
-    "description": "A serene tropical-modern retreat blending natural textures, minimalist design, and lush outdoor living. Featuring a private pool, elegant interiors, and a pergola lounge, Villa María offers timeless comfort and refined architecture in perfect harmony with nature."
+    "description": "A serene tropical modern retreat in Lehigh Acres. Villa Maria blends natural textures, warm wood accents, and matte black architecture with lush outdoor living around a private pool. Refined interiors, a chef kitchen, spa like baths, and a pergola lounge deliver timeless comfort and quiet sophistication."
 
   },
   {
@@ -71,7 +71,7 @@
     "floor_types": ["Ceramic floor", "Tile floors"],
     "price": "$2 M",
     "image": "/assets/images/Villa_Dorticos/6.jpg",
-     "description": "Villa Dorticos blends bold geometry and organic softness. A dark, elegant façade contrasts with natural wood and lush greenery. Inside, expansive layouts, warm tones, and curated lighting define an atmosphere of refined comfort and timeless sophistication."
+     "description": "A waterfront retreat in Punta Gorda where bold geometry meets organic softness. A dark and elegant exterior pairs with warm wood and lush greenery, opening to expansive layouts with double height light, warm tones, and curated illumination. Terraced gardens, a pool terrace, and a private dock create a seamless connection to nature, delivering refined comfort and timeless sophistication."
 
   },
   {
@@ -96,7 +96,7 @@
     "floor_types": ["Ceramic floor", "Tile floors"],
     "price": null,
     "image": "/assets/images/Villa_Oceania/2.jpg",
-    "description" : null
+    "description" : "A waterfront tropical modern residence in Punta Gorda. Villa Oceania pairs sculpted rooflines, matte dark stucco, and warm wood with generous glass and lush gardens, opening to elegant interiors with soft lighting, a chef kitchen, and spa baths. A long waterfront terrace with pool, lounge areas, and a dock frames sweeping water views and delivers a calm, refined lifestyle with timeless sophistication."
   },
   {
     "id": 5,
@@ -120,7 +120,7 @@
     "floor_types": ["Ceramic floor", "Tile floors"],
     "price": "$3.99 M",
     "image": "/assets/images/Villa_Oasis/2.jpg",
-     "description": "Villa Tropical Oasis combines modern design with tropical nature, creating a unique retreat. With open spaces, sustainable materials, and elegant details, it offers luxury, tranquility, and a deep connection to the surroundings."
+     "description": "A waterfront tropical modern residence in Florida. Dark stucco and warm wood pair with generous glass and clean roof lines, opening to serene interiors with an open kitchen, spa baths, and curated lighting. A pool terrace, lounge deck, and a private dock deliver calm living with timeless sophistication."
 
   },
   {
@@ -145,7 +145,7 @@
     "floor_types": ["Ceramic floor", "Tile floors"],
     "price": null,
     "image": "/assets/images/Villa_Nacho/3.jpg",
-    "description" : null
+    "description" : "A tropical modern residence in Lehigh Acres. Villa Nacho blends matte dark stucco, warm wood screens, and crisp geometry with lush landscaping. Bright interiors with clerestory light, an open chef kitchen, and spa baths flow to a private pool terrace, delivering refined comfort, privacy, and timeless sophistication."
   },
   {
     "id": 7,
@@ -171,7 +171,7 @@
     "floor_types": ["Ceramic floor", "Tile floors"],
     "price": "$3.6 M",
     "image": "/assets/images/Villa_Valeria/1.jpg",
-     "description": "Villa Valeria is a contemporary sanctuary where refined minimalism meets organic warmth. Its clean geometry and textured finishes create a striking balance between modern sophistication and natural serenity. Inside, light-filled spaces flow effortlessly from one environment to the next, blending comfort, function, and aesthetics. From the sculptural staircase to the curated greenery, every detail is designed to elevate daily living and evoke a timeless sense of harmony."
+     "description": "A contemporary sanctuary in Miami where refined minimalism meets organic warmth. Clean geometry, textured stucco, and vertical wood screens frame light filled interiors that flow to a private courtyard with pool, pergola lounge, and garden. Calm palettes, curated lighting, and crafted details elevate daily living and create a timeless sense of harmony."
 
   },
   {
@@ -198,7 +198,7 @@
     "floor_types": ["Ceramic floor", "Tile floors"],
     "price": "$2.8 M",
     "image": "/assets/images/Villa_Barranquilla/3.jpg",
-    "description": "Villa Barranquilla merges contemporary architecture with natural warmth. The façade features bold lines and wooden accents, blending seamlessly with lush greenery. Inside, open layouts with soft tones, wooden textures, and abundant natural light create a harmonious space that balances elegance and comfort, perfect for modern living."
+    "description": "A contemporary retreat in Miami that pairs textured stucco, vertical wood screens, and generous glass with lush greenery. Bold lines and warm natural tones shape calm interiors where open layouts, crafted millwork, and soft lighting flow to a private patio with pool and lounge. The result is refined comfort and modern elegance in perfect balance."
 
   },
   {
@@ -225,7 +225,7 @@
     "floor_types": ["Ceramic floor", "Tile floors"],
     "price": "$2.8 M",
     "image": "/assets/images/Villa_Santa_Marta/2.jpg",
-    "description": "This modern home seamlessly blends bold architectural design with natural elements. The façade combines concrete and wood, harmonizing with lush surroundings for a balanced, elegant look. Inside, open spaces with marble finishes, natural wood tones, and ample light create a serene atmosphere, prioritizing comfort, functionality, and connection to nature."
+    "description": "A modern sanctuary in Miami that blends bold geometry with natural warmth. A concrete facade with wood screens sits within lush gardens and generous glazing. Inside, open spaces with marble finishes and natural wood tones gather daylight and flow to a private pool deck and an upper terrace, delivering refined comfort, function, and a calm connection to nature."
 
   },
   {
@@ -252,7 +252,7 @@
     "floor_types": ["Ceramic floor", "Tile floors"],
     "price": "$2.8 M",
     "image": "/assets/images/Villa_Cartagena/1.jpg",
-     "description": "Villa Cartagena is a contemporary residence designed to merge luxury and nature. Surrounded by tropical greenery, it features sleek modern architecture, expansive glass windows, and warm wooden accents, creating a serene and sophisticated living experience."
+     "description": "A contemporary refuge in Miami that unites refined architecture with tropical nature. A tall glass volume wrapped in warm wood screens anchors the facade, bringing lush greenery into calm, light filled interiors. Open living areas with a chef kitchen and spa baths flow to a private garden with pool and lounge, delivering a serene and sophisticated way of life."
 
   },
   {
@@ -303,7 +303,7 @@
     "floor_types": ["Ceramic floor", "Tile floors"],
     "price": "$ 2M",
     "image": "/assets/images/Villa_Ochoa/2.jpg",
-    "description": "Villa Ochoa combines minimalist architecture with natural elegance. The exterior’s clean lines and earthy tones integrate seamlessly with lush surroundings, while expansive windows invite natural light inside. The open-plan interior, featuring marble accents and warm wood, fosters comfort and sophistication, creating a harmonious balance between modern design and serene living."
+    "description": "Villa Ochoa pairs minimalist architecture with natural warmth. A low, linear façade in stone-gray stucco and vertical wood screens sits within lush greenery, while expansive glazing and clerestory windows bathe the interiors in soft Florida light. Inside, an open plan wrapped in creamy plaster, marble accents, and custom millwork drifts out to the covered terrace, pool, and private dock—an effortless balance of modern design and serene living."
 
   },
   {
@@ -328,7 +328,7 @@
     "floor_types": ["Ceramic floor", "Tile floors"],
     "price": "$2 M",
     "image": "/assets/images/Villa_Don_Quixote/1.jpg",
-    "description": "Villa Don Quixote combines modern elegance with a serene outdoor retreat. The bold façade features clean lines and earthy textures, blending with lush greenery. Inside, open layouts and warm tones enhance comfort, while the poolside area invites relaxation, offering a perfect balance between sophistication and tranquility."
+    "description": "Villa Don Quixote blends modern elegance with a serene outdoor retreat. A bold façade of clean lines and warm, earthy textures pairs with lush greenery. Inside, open layouts and soft, layered lighting create effortless comfort, while the poolside lounge invites relaxation—striking a refined balance between sophistication and tranquility."
 
   },
   {
@@ -378,7 +378,7 @@
     "floor_types": ["Ceramic floor", "Tile floors"],
     "price": "$675 K",
     "image": "/assets/images/Villa_Nukes/7.jpg",
-    "description": "Villa Nukes embraces calm sophistication through clean design and natural elegance. Warm interiors, minimalist decor, and open layouts invite effortless living. Surrounded by lush privacy, its sunlit poolside and earthy palette create a seamless blend between indoor comfort and outdoor relaxation."
+    "description": "A modern sanctuary in Lehigh Acres that pairs calm sophistication with natural elegance. Clean geometry, warm woods, and an earthy palette frame bright, open-plan living that flows to a sunlit pool terrace. With four bedrooms, three baths, and lush privacy, it’s designed for effortless indoor-outdoor relaxation."
 
   },
   {
@@ -403,7 +403,7 @@
     "floor_types": ["Ceramic floor", "Tile floors"],
     "price": "$675 K",
     "image": "/assets/images/Villa_Esplanade/7.jpg",
-    "description": "Villa Esplanade blends waterfront tranquility with modern minimalism. Nestled in lush Miami greenery, this one-story home celebrates horizontal lines, warm textures, and open-plan elegance—where architecture meets serenity."
+    "description": "A serene, single-story residence that pairs coastal calm with contemporary minimalism. Rhythmic wood screens, low horizontal lines, and generous glazing frame sculpted gardens and soften the façade. Inside, a clerestory-lit great room centers a chef’s kitchen with a monolithic island, while spa-like suites feature rich stone and warm veneers. Seamless indoor-outdoor flow leads to landscaped terraces and pool—elegance made effortless."
  
   },
   {
@@ -428,7 +428,7 @@
     "floor_types": ["Ceramic floor", "Tile floors"],
     "price": null,
     "image": "/assets/images/Villa_Penate/2.jpg",
-    "description" : null
+    "description" : "Villa Penate is a refined one-story residence that balances crisp geometry with warm, tactile finishes. A moody façade with wood accents and expansive glazing leads to light-filled interiors chef’s kitchen, lofted living, and spa suites that unfold to a pool terrace and waterfront dock, creating seamless, resort-style indoor–outdoor living."
   },
   {
     "id": 18,
@@ -477,6 +477,6 @@
     "floor_types": ["Ceramic floor", "Tile floors"],
     "price": null,
     "image": "/assets/images/Villa_Tortuga/3.jpg",
-    "description" : null
+    "description" : "Villa Tortuga pairs a low, modern profile with warm wood accents and soft lighting, set among palms for a relaxed streetscape. Inside, airy rooms and a lofty kitchen–dining space use pale oak, stone, and matte black details for quiet sophistication, while calm bedrooms and a spa-like bath open to a pool terrace made for easy coastal living."
   }
 ]

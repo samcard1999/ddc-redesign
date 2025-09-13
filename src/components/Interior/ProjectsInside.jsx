@@ -298,7 +298,7 @@ export default function ProjectsInside() {
                           {p.location}
                         </span>
                         <span className="text-sm text-primary transition-opacity duration-300">
-                          {Math.floor(Math.random() * (2025 - 2020 + 1)) + 2020}
+                          2025
                         </span>
                       </div>
                     </div>

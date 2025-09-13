@@ -98,18 +98,18 @@ const Accordion = ({ onOpenChange, isDark }) => {
             </button>
 
             <div
-              className={`flex lg:flex-row flex-col gap-4 lg:gap-16 items-end overflow-hidden transition-all duration-500 ${
+              className={`flex lg:flex-row flex-col gap-4 lg:gap-16 items-start overflow-hidden transition-all duration-500 ${
                 opened ? "max-h-fit opacity-100 mb-8" : "max-h-0 opacity-0"
               }`}
             >
               <img
-                className="lg:h-80 lg:ml-[20vw] object-cover h-full"
+                className="lg:h-80 lg:ml-[20vw] object-cover h-full w-[75vw] lg:w-auto"
                 src={item.image}
                 alt={`${item.alt}`}
               />
 
               <div
-                className={`lg:px-4 lg:py-0 p-4 text-sm transition-colors duration-500 ${
+                className={`lg:px-4 lg:py-0 lg:pr-0 py-4 pr-4 text-sm transition-colors duration-500 ${
                   isDark ? "text-primary/85" : "text-secondary/85"
                 }`}
               >
