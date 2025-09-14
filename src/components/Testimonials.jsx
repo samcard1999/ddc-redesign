@@ -7,6 +7,7 @@ import "swiper/css/effect-cards";
 import "swiper/css/pagination";
 import Footer from "./Footer";
 import PrimaryButton from "./buttons/PrimaryButton";
+import { useTranslation } from "react-i18next";
 
 /** Tarjeta (igual que antes) */
 function TestimonialCard({ name, description, stars = 5, bgImage }) {
@@ -32,6 +33,7 @@ function TestimonialCard({ name, description, stars = 5, bgImage }) {
 }
 
 const Testimonials = () => {
+  const { t } = useTranslation();
   const staticBackground = "/bg/testimonial_card_bg.webp";
   const items = [
     {
@@ -66,7 +68,7 @@ const Testimonials = () => {
       className="h-screen w-full bg-primary text-secondary flex flex-col items-center justify-center gap-12 pt-32 lg:pt-20 pb-10 relative overflow-hidden"
     >
       <h1 className="text-4xl lg:text-5xl font-bold absolute left-8 top-20">
-        Testimonials
+        {t("testimonials.title")}
       </h1>
 
       {/* Wrapper con perspectiva y láminas detrás (decorativo opcional) */}
@@ -157,7 +159,7 @@ const Testimonials = () => {
         </div>
       </div>
       <PrimaryButton className="text-primary bg-secondary text-xl !px-8 !py-3 hover:bg-secondary/50 hover:!text-secondary">
-        Subscribe to our Newsletter
+        {t("testimonials.button")}
       </PrimaryButton>
       <Footer className="text-secondary" />
     </section>

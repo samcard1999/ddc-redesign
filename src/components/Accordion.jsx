@@ -1,10 +1,11 @@
 // Accordion.jsx
 import React, { useState, useEffect, useLayoutEffect } from "react";
 import items from "../data/accordion.json";
+import { useTranslation } from "react-i18next";
 
 const Accordion = ({ onOpenChange, isDark }) => {
   const [openIndex, setOpenIndex] = useState(null);
-
+  const { t } = useTranslation();
   const toggle = (index) => {
     const next = openIndex === index ? null : index;
     setOpenIndex(next);
@@ -45,7 +46,9 @@ const Accordion = ({ onOpenChange, isDark }) => {
                 >
                   {item.number}
                 </span>
-                <span className="text-base font-bold">{item.title}</span>
+                <span className="text-base font-bold">
+                  {t(`our_process.accordion.${index + 1}.title`)}
+                </span>
                 <div
                   className={`h-full w-px py-2 transition-colors duration-300 ${
                     isDark ? "bg-primary/30" : "bg-gray-400"
@@ -114,7 +117,7 @@ const Accordion = ({ onOpenChange, isDark }) => {
                   isDark ? "text-primary/85" : "text-secondary/85"
                 }`}
               >
-                {item.content}
+                {t(`our_process.accordion.${index + 1}.description`)}
               </div>
             </div>
           </div>

@@ -7,6 +7,7 @@ import technolgies from "../../data/technologies.json";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/all";
+import { Trans, useTranslation } from "react-i18next";
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
 const cards = [
@@ -38,6 +39,7 @@ const cards = [
 ];
 
 const StatisticCard = ({ icon, description }) => {
+  const { t } = useTranslation();
   return (
     <div className="stat-card relative aspect-[3.5/1] w-full flex px-4 py-4 justify-between">
       <span className="absolute top-0 left-0 -translate-x-1/2 -translate-y-1/2 text-secondary opacity-40 text-2xl">
@@ -71,6 +73,7 @@ const TechnologiesInside = () => {
   const sectionRef = useRef(null); // sección a la que se aplica minHeight
   const [total_grid, setTotalGrid] = useState(0);
   const [total_grid2, setTotalGrid2] = useState(0);
+  const { t } = useTranslation();
 
   useLayoutEffect(() => {
     if (!sectionRef.current || !gridRef.current) return;
@@ -271,20 +274,21 @@ const TechnologiesInside = () => {
       >
         <div className="flex w-full justify-between items-center text-secondary">
           <h1 className="reveal-lines lg:text-5xl text-[2.1rem] lg:leading-normal leading-10 font-bold">
-            Inside the DDC Panel System
+            {t("technology_inside.title")}
           </h1>
-          <PrimaryButton className="top-cta hidden lg:block bg-secondary text-xl !py-3 !px-6 text-primary">
-            Book 30-min Intro
+          <PrimaryButton className="top-cta hidden lg:block bg-secondary text-xl !py-3 !px-6 hover:text-secondary text-primary">
+            {t("technology_inside.button")}
           </PrimaryButton>
         </div>
 
         <h2 className="reveal-lines lg:text-xl text-secondary text-left">
-          What makes DDC different
-          <br className="lg:hidden" /> (construction - first)
+          <Trans i18nKey={"technology_inside.subtitle"}>
+            <br></br>
+          </Trans>
         </h2>
 
         <PrimaryButton className="mobile-cta bg-secondary mt-6 text-primary lg:hidden">
-          Book 30-min Intro
+          {t("technology_inside.button")}
         </PrimaryButton>
       </div>
 
@@ -327,7 +331,7 @@ const TechnologiesInside = () => {
              transition-all duration-700 ease-in-out 
              text-[clamp(0.9rem,1vw,1.25rem)]"
               >
-                {card.description}
+                {t("technology_cards." + (i + 1) + ".description")}
               </p>
             </div>
           ))}
@@ -346,10 +350,10 @@ const TechnologiesInside = () => {
             alt="Wall Panels Technology"
           />
           <div className="bg-secondary flex flex-col justify-center items-start px-4 absolute w-full py-2 lg:py-0 lg:h-[15%] bottom-0 left-0 lg:border-r lg:border-primary/20">
-            <h2 className="text-lg text-primary font-bold">Wall Panels</h2>
-            <p className="text-sm text-primary/90">
-              Pre-engineered walls with planned service paths
-            </p>
+            <h2 className="text-lg text-primary font-bold">
+              {t("panels.wall")}
+            </h2>
+            <p className="text-sm text-primary/90">{t("panels.wall_desc")}</p>
           </div>
         </div>
 
@@ -360,10 +364,10 @@ const TechnologiesInside = () => {
             alt="Roof Panels Technology"
           />
           <div className="bg-secondary flex justify-center items-start flex-col px-4 absolute w-full py-2 lg:py-0 lg:h-[15%] bottom-0 left-0 lg:border-r lg:border-primary/20">
-            <h2 className="text-lg text-primary font-bold">Roof Panels</h2>
-            <p className="text-sm text-primary/90">
-              Lightweight, high-span modules that close the envelope quickly
-            </p>
+            <h2 className="text-lg text-primary font-bold">
+              {t("panels.roof")}
+            </h2>
+            <p className="text-sm text-primary/90">{t("panels.roof_desc")}</p>
           </div>
         </div>
         <div className="flex-1 panel-item w-full overflow-hidden relative">
@@ -373,10 +377,10 @@ const TechnologiesInside = () => {
             alt="Floor Panels Technology"
           />
           <div className="bg-secondary flex justify-center items-start flex-col px-4 absolute w-full py-2 lg:py-0 lg:h-[15%] bottom-0 left-0">
-            <h2 className="text-lg text-primary font-bold">Floor Panels</h2>
-            <p className="text-sm text-primary/90">
-              Rigid, level assemblies that install fast
-            </p>
+            <h2 className="text-lg text-primary font-bold">
+              {t("panels.floor")}
+            </h2>
+            <p className="text-sm text-primary/90">{t("panels.floor_desc")}</p>
           </div>
         </div>
       </div>
@@ -390,7 +394,7 @@ const TechnologiesInside = () => {
           <StatisticCard
             key={i}
             icon={tech.icon}
-            description={tech.description}
+            description={t(`technology_statistics.${i + 1}.description`)}
           />
         ))}
       </div>

@@ -4,8 +4,10 @@ import Accordion from "./Accordion";
 import Footer from "./Footer";
 import PrimaryButton from "./buttons/PrimaryButton";
 import items from "../data/accordion.json";
+import { useTranslation } from "react-i18next";
 
 const OurProcess = () => {
+  const { t } = useTranslation();
   // Índice abierto. Si ninguno: null.
   const [openIndex, setOpenIndex] = useState(null);
 
@@ -57,7 +59,7 @@ const OurProcess = () => {
             className="lg:text-5xl text-[2.1rem] lg:leading-normal leading-10 font-bold text-secondary hover:bg-secondary/50
           hover:text-secondary"
           >
-            Our Process
+            {t("our_process.title")}
           </h1>
 
           {/* Botón desktop */}
@@ -66,7 +68,7 @@ const OurProcess = () => {
             className="hidden lg:block text-xl !py-3 !px-6 bg-secondary text-primary hover:bg-secondary/50
           hover:!text-secondary"
           >
-            Investor Hub
+            {t("our_process.button")}
           </PrimaryButton>
         </div>
       </div>
@@ -79,7 +81,7 @@ const OurProcess = () => {
         href="/investor-hub"
         className="mt-6 self-center lg:hidden bg-secondary text-primary"
       >
-        Investor Hub
+        {t("our_process.button")}
       </PrimaryButton>
 
       {/* Footer + gradiente inferior */}

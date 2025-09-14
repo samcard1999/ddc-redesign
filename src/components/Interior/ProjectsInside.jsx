@@ -12,6 +12,7 @@ import Header from "../Header";
 import projects from "../../data/villas.json"; // [{ id, title, image, year, location }...]
 import { useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
+import { useTranslation } from "react-i18next";
 
 // Variantes framer-motion
 const containerV = {
@@ -39,7 +40,7 @@ export default function ProjectsInside() {
   const [matchMode, setMatchMode] = useState("contains"); // "contains" | "exact"
   const [view, setView] = useState("grid"); // "grid" | "list"
   const [location, setLocation] = useState("All");
-  const navigate = useNavigate();
+  const { t } = useTranslation();
   const handleProjectClick = (projectId) => {
     window.location.href = `/projects/${projectId}`;
   };
@@ -109,7 +110,7 @@ export default function ProjectsInside() {
           <div className="px-8 pt-24 mb-6 ">
             <div className="flex lg:flex-row flex-col w-full lg:justify-between  lg:items-center ">
               <h1 className="text-4xl font-bold text-primary mb-4">
-                Our Projects
+                {t("projects_inside.title")}
               </h1>
 
               {/* Search */}
@@ -117,7 +118,7 @@ export default function ProjectsInside() {
                 <input
                   value={query}
                   onChange={(e) => setQuery(e.target.value)}
-                  placeholder="Search projects…"
+                  placeholder={t("projects_inside.search")}
                   className="w-full lg:w-[20vw] rounded-full border border-white/20 bg-white/5 text-primary placeholder:text-white/50 px-5 py-3 pr-12 outline-none focus:border-white/40"
                 />
                 <svg
@@ -153,7 +154,7 @@ export default function ProjectsInside() {
                       : " text-grey/50 hover:bg-white/20"
                   }`}
                 >
-                  List
+                  {t("projects_inside.list")}
                 </button>
                 <span>/</span>
                 <button
@@ -165,7 +166,7 @@ export default function ProjectsInside() {
                       : " text-grey/50 hover:bg-white/20"
                   }`}
                 >
-                  Grid
+                  {t("projects_inside.grid")}
                 </button>
               </div>
 
@@ -177,12 +178,12 @@ export default function ProjectsInside() {
                   defaultValue="" // para forzar selección inicial vacía
                 >
                   <option value="" disabled className="!text-slate-400">
-                    Location
+                    {t("projects_inside.location")}
                   </option>
                   <option value="Punta Gorda">Punta Gorda</option>
                   <option value="Miami">Miami</option>
                   <option value="Lehigh Acres">Lehigh</option>
-                  <option value="All">All</option>
+                  <option value="All"> {t("projects_inside.all")}</option>
                 </select>
                 <svg
                   className="lg:hidden pointer-events-none absolute right-2 top-1/2 -translate-y-1/2 w-4 h-4 text-primary"

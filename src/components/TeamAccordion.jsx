@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import team from "../data/team.json"; // [{ id, name, role, image, description, class }...]
+import { useTranslation } from "react-i18next";
 
 // Aparición de cada item al entrar al viewport
 const itemReveal = {
@@ -41,6 +42,7 @@ const textVariants = {
 };
 
 export default function TeamAccordion({ items = team }) {
+  const { t } = useTranslation();
   const [openId, setOpenId] = useState(items?.[0]?.id);
   const reduce = false; // o usa useReducedMotion()
   const toggle = (id) => setOpenId((prev) => (prev === id ? null : id));
@@ -51,9 +53,9 @@ export default function TeamAccordion({ items = team }) {
         const id = m.id ?? `member-${idx}`;
         const isOpen = id === openId;
         const name = m.name;
-        const role = m.role;
+        const role = t(`team.team_members.${m.id}.role`);
         const image = m.image || m.photo; // compat
-        const desc = m.description || m.bio; // compat
+        const desc = t(`team.team_members.${m.id}.description`);
 
         return (
           <motion.div

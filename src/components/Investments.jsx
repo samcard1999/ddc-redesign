@@ -5,12 +5,13 @@ import AnimatedBackground from "./Background/AnimatedBackground";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SplitText from "gsap/SplitText";
+import { Trans, useTranslation } from "react-i18next";
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
 const Investments = () => {
   const sectionRef = useRef(null);
-
+  const { t } = useTranslation();
   useLayoutEffect(() => {
     const section = sectionRef.current;
     if (!section) return;
@@ -141,24 +142,25 @@ const Investments = () => {
       <div className="flex flex-col w-full gap-4 justify-start items-start 2xl-custom:absolute 2xl-custom:left-0 2xl-custom:top-32 2xl-custom:px-8 2xl:relative 2xl:inset-auto 2xl:px-0">
         <div className="flex w-full justify-between items-center">
           <h1 className="lg:text-5xl text-[2.1rem] lg:leading-normal leading-10 font-bold">
-            Why invest with DDC Developments?
+            {t("investments.title")}
           </h1>
           <PrimaryButton
             href="/investor-hub"
             className="top-btn hidden lg:block bg-primary text-xl !py-3 !px-6 text-secondary hover:text-primary"
           >
-            Investor Hub
+            {t("investments.button")}
           </PrimaryButton>
         </div>
         <h2 className="lg:text-xl text-left">
-          What makes DDC different
-          <br className="lg:hidden" /> (construction - first)
+          {t("investments.subtitle")}
+          <br />
+          <span>(construction-first)?</span>
         </h2>
         <PrimaryButton
           href="/investor-hub"
           className="mobile-btn bg-primary mt-6 text-secondary self-center lg:hidden hover:text-primary"
         >
-          Investor Hub
+          {t("investments.button")}
         </PrimaryButton>
       </div>
 
@@ -173,8 +175,9 @@ const Investments = () => {
               +
             </span>
             <h2 className="lg:text-4xl text-2xl text-center font-bold">
-              End to end
-              <br className="hidden lg:block" /> Platform
+              <Trans i18nKey="investments.grid.1.title">
+                <br className="hidden lg:block" />
+              </Trans>
             </h2>
             <p className="text-gray-400 text-sm text-center">
               From acquisition to pre-sale
@@ -191,11 +194,12 @@ const Investments = () => {
               +
             </span>
             <h2 className="lg:text-4xl text-2xl font-bold text-center">
-              40+ properties
-              <br className="hidden lg:block" /> developed
+              <Trans i18nKey="investments.grid.2.title">
+                <br className="hidden lg:block" />
+              </Trans>
             </h2>
             <p className="text-gray-400 text-sm text-center">
-              Proven delivery across markets.
+              {t("investments.grid.2.description")}
             </p>
           </div>
         </div>
@@ -212,11 +216,12 @@ const Investments = () => {
               +
             </span>
             <h2 className="lg:text-4xl text-2xl text-center font-bold">
-              $650 M real estate
-              <br /> transactions
+              <Trans i18nKey="investments.grid.3.title">
+                <br className="hidden lg:block" />
+              </Trans>
             </h2>
             <p className="text-gray-400 text-sm text-center">
-              From acquisition to pre-sale, under one playbook.
+              {t("investments.grid.3.description")}
             </p>
           </div>
 
@@ -229,11 +234,12 @@ const Investments = () => {
               +
             </span>
             <h2 className="lg:text-4xl text-2xl font-bold text-center">
-              $50M+ under
-              <br /> management
+              <Trans i18nKey="investments.grid.4.title">
+                <br className="hidden lg:block" />
+              </Trans>
             </h2>
             <p className="text-gray-400 text-sm text-center">
-              Scale with disciplined governance.
+              {t("investments.grid.4.description")}
             </p>
           </div>
         </div>

@@ -12,6 +12,7 @@ import Header from "../Header";
 import projects from "../../data/villas.json";
 import { useLocation, useParams } from "react-router-dom";
 import { Helmet } from "react-helmet";
+import { useTranslation } from "react-i18next";
 
 // ===== Variantes framer-motion (suaves y elegantes) =====
 const easeOutExpo = [0.22, 1, 0.36, 1];
@@ -83,8 +84,7 @@ export default function ProjectDetails() {
   const [location, setLocation] = useState("All");
   const { projectId } = useParams();
   const { pathname } = useLocation();
-  const shouldReduce = useReducedMotion();
-
+  const { t } = useTranslation();
   const project = useMemo(
     () => projects.find((p) => p.folder === projectId) ?? null,
     [projectId]
@@ -179,18 +179,20 @@ export default function ProjectDetails() {
                 variants={fadeUpV}
                 className="font-semibold text-sm lg:text-lg mb-4 text-primary/80"
               >
-                <span>{project.bedrooms}</span>
-                <span> Bedrooms</span>
+                <span>{project.bedrooms} </span>
+                <span>{t("project_details.bedrooms")}</span>
                 <span> ● </span>
                 <span>{project.bathrooms}</span>
-                <span> Bathrooms</span>
+                <span> {t("project_details.bathrooms")}</span>
               </motion.h2>
 
               <motion.p
                 variants={fadeUpV}
                 className="text-xs lg:text-lg lg:w-3/5"
               >
-                {project.description}
+                {t(
+                  `project_details.project_description.${project.folder}.description`
+                )}
               </motion.p>
             </div>
           </div>

@@ -7,6 +7,7 @@ import culture from "../data/ourCulture.json";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Mousewheel, Keyboard } from "swiper/modules";
 import "swiper/css";
+import { useTranslation } from "react-i18next";
 
 // helpers: calcular offset final dinámico
 function getRect(el) {
@@ -44,6 +45,7 @@ const containerVariant = {
 };
 
 export default function TeamSection({}) {
+  const { t } = useTranslation();
   // Modo solo para animar el título y disparar la animación secuencial de slides
   const [mode, setMode] = useState("team"); // "team" | "culture"
   const [activeId, setActiveId] = useState(members?.[0]?.id);
@@ -80,7 +82,7 @@ export default function TeamSection({}) {
           exit={{ opacity: 0, y: -6 }}
           transition={{ duration: 0.28, ease: "easeOut" }}
         >
-          {isTeam ? "Team" : "Our Culture"}
+          {isTeam ? t("team.title") : t("culture.title")}
         </motion.h2>
       </AnimatePresence>
 
@@ -92,7 +94,7 @@ export default function TeamSection({}) {
         !px-10 !py-3 left-1/2 -translate-x-1/2 hover:text-primary"
         onClick={() => setMode((m) => (m === "team" ? "culture" : "team"))}
       >
-        {isTeam ? "Our Culture" : "Team"}
+        {isTeam ? t("team.button_culture") : t("team.button_team")}
       </button>
 
       {/* IZQUIERDA: Swiper vertical */}
@@ -173,7 +175,7 @@ export default function TeamSection({}) {
                         className={`text-xs lg:text-sm text-primary/80 transition-opacity duration-300
                           ${isActive ? "opacity-100" : "opacity-80"}`}
                       >
-                        {m.role}
+                        {t(`team.team_members.${active.id}.role`)}
                       </p>
                     </div>
                   </motion.button>
@@ -204,10 +206,10 @@ export default function TeamSection({}) {
                   {/* Línea visible como si estuviera “activa” */}
                   <div className="pl-4">
                     <h3 className="text-base lg:text-lg font-bold text-primary opacity-100">
-                      {feat.name}
+                      {t(`culture.features.${idx + 1}.title`)}
                     </h3>
                     <p className="text-xs lg:text-sm text-primary/80 opacity-100">
-                      {feat.role}
+                      {t(`culture.features.${idx + 1}.description`)}
                     </p>
                   </div>
                 </motion.li>
@@ -295,7 +297,7 @@ export default function TeamSection({}) {
                       {active.name}
                       <br />
                       <span className="text-primary/70 text-sm">
-                        {active.role}
+                        {t(`team.team_members.${active.id}.role`)}
                       </span>
                     </motion.h2>
                   </AnimatePresence>
@@ -310,7 +312,7 @@ export default function TeamSection({}) {
                     exit={{ opacity: 0, y: -6 }}
                     transition={{ duration: 0.25, ease: "easeOut" }}
                   >
-                    {active.description}
+                    {t(`team.team_members.${active.id}.description`)}
                   </motion.p>
                 </AnimatePresence>
               </motion.div>

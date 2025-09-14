@@ -5,6 +5,7 @@ import ourCulture from "../data/ourCulture.json";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
+import { useTranslation } from "react-i18next";
 
 export default function OurCultureMobile({
   videoSrc = "/assets/video/our-culture.mp4",
@@ -14,8 +15,7 @@ export default function OurCultureMobile({
   const videoRef = useRef(null);
   const [videoDur, setVideoDur] = useState(16); // fallback si el video aún no cargó
 
-  const getText = (it) => it.text ?? it.title ?? it.name ?? "";
-  const getSub = (it) => it.role ?? "";
+  const { t } = useTranslation();
 
   // Asegura autoplay del video en móvil/safari y toma su duración
   useEffect(() => {
@@ -61,7 +61,7 @@ export default function OurCultureMobile({
 
       {/* Overlay de textos (Swiper vertical) */}
       <h2 className="text-3xl font-bold text-primary absolute left-8 bottom-52 mix-blend-difference">
-        Our Culture
+        {t("culture.title")}
       </h2>
       <div className="absolute inset-x-0 bottom-0 z-10 px-8 pb-8 md:pb-12">
         <div className="relative h-40  overflow-hidden [mask-image:linear-gradient(to_top,black,black,transparent)]">
@@ -83,13 +83,12 @@ export default function OurCultureMobile({
               <SwiperSlide key={i} className="!flex !items-start">
                 <div className="text-white/95 space-y-1">
                   <p className="text-base md:text-lg font-bold leading-tight">
-                    {getText(it)}
+                    {t(`culture.features.${i}.title`)}
                   </p>
-                  {getSub(it) && (
-                    <p className="text-xs md:text-sm text-white/75 leading-snug">
-                      {getSub(it)}
-                    </p>
-                  )}
+
+                  <p className="text-xs md:text-sm text-white/75 leading-snug">
+                    {t(`culture.features.${i}.description`)}
+                  </p>
                 </div>
               </SwiperSlide>
             ))}

@@ -3,12 +3,13 @@ import Footer from "./Footer";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SplitText from "gsap/SplitText";
+import { useTranslation } from "react-i18next";
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
 const About = () => {
   const aboutRef = useRef(null);
-
+  const { t } = useTranslation();
   useLayoutEffect(() => {
     const section = aboutRef.current;
     if (!section) return;
@@ -163,9 +164,9 @@ const About = () => {
       className="relative w-full h-screen px-8 bg-primary text-secondary"
     >
       <div className="absolute px-8 lg:px-12 left-0 top-1/2 -translate-y-full flex flex-col lg:flex-row lg:justify-between items-end gap-4 w-full">
-        <h1 className="text-5xl lg:text-5xl font-bold">About</h1>
+        <h1 className="text-5xl lg:text-5xl font-bold">{t("about.title")}</h1>
         <h2 className="text-2xl lg:text-5xl max-w-[94%] lg:max-w-[70%] font-bold text-right">
-          The future is not Waited, it is built
+          {t("about.subtitle")}
         </h2>
       </div>
 
@@ -185,13 +186,7 @@ const About = () => {
           </span>
 
           <p className="relative text-sm lg:text-lg lg:max-w-[99%]">
-            DDC Developments is transforming construction with a steadfast
-            commitment to environmental responsibility. We deploy cutting-edge
-            technologies including modular systems from our partners’ facilities
-            in Florida to deliver innovative, sustainable solutions that
-            redefine efficiency and performance; this partnership-driven,
-            disruptive approach positions us as an industry leader shaping the
-            future of construction.
+            {t("about.text")}
           </p>
         </div>
       </div>

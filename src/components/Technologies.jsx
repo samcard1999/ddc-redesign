@@ -6,12 +6,13 @@ import AnimatedBackground from "./Background/AnimatedBackground";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SplitText from "gsap/SplitText";
 import CountUpOnVisible from "./helpers/CountUpOnVisible";
+import { useTranslation } from "react-i18next";
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
 const Technologies = () => {
   const sectionRef = useRef(null);
-
+  const { t } = useTranslation();
   useLayoutEffect(() => {
     const section = sectionRef.current;
     if (!section) return;
@@ -113,14 +114,14 @@ const Technologies = () => {
       <div className="flex flex-col h-[65%] lg:h-[55%]  justify-between absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 lg:-translate-y-[10%]  w-full px-8 lg:py-8">
         <div className="flex justify-between w-full items-center">
           <h1 className="text-[2.1rem] lg:text-6xl font-bold text-left">
-            Numbers don't lie
+            {t("technology.title")}
           </h1>
 
           <PrimaryButton
             href="/technologies"
             className="top-btn hidden lg:block bg-primary !p-3  hover:bg-white/10 hover:text-primary active:bg-white/10 active:text-primary text-lg text-secondary self-center"
           >
-            Explore Technology
+            {t("technology.button")}
           </PrimaryButton>
         </div>
 
@@ -138,11 +139,11 @@ const Technologies = () => {
                 suffix="+"
                 start={100}
                 end={200}
-                duration={3}
+                duration={2}
               />
             </h2>
             <h3 className="opacity-60 text-xs lg:text-sm">
-              mph wind Engineering
+              {t("technology.1")}
             </h3>
           </div>
           <div className="metric-block relative flex flex-col justify-center items-center w-full my-5 py-5">
@@ -173,10 +174,12 @@ const Technologies = () => {
                 suffix="%"
                 start={10}
                 end={30}
-                duration={3}
+                duration={2}
               />
             </h2>
-            <h3 className="opacity-60 text-xs lg:text-sm">lower build costs</h3>
+            <h3 className="opacity-60 text-xs lg:text-sm">
+              {t("technology.2")}
+            </h3>
           </div>
           <div className="metric-block flex flex-col justify-center items-center w-full relative pb-7 lg:pb-0">
             <span className="absolute -bottom-6 lg:top-0 left-0 lg:left-full -translate-x-1/2 -translate-y-1/2 lg:translate-y-0 h-fit text-primary opacity-40 text-2xl lg:text-3xl">
@@ -192,17 +195,19 @@ const Technologies = () => {
                 suffix=""
                 start={30}
                 end={60}
-                duration={3}
+                duration={2}
               />
               <CountUpOnVisible
                 prefix={"-"}
                 suffix="%"
                 start={40}
                 end={70}
-                duration={3}
+                duration={2}
               />
             </h2>
-            <h3 className="opacity-60 text-xs lg:text-sm">faster schedules</h3>
+            <h3 className="opacity-60 text-xs lg:text-sm">
+              {t("technology.3")}
+            </h3>
           </div>
         </div>
         <PrimaryButton
@@ -218,19 +223,19 @@ const Technologies = () => {
             href="/"
             className="hover:text-white transition-colors duration-300 justify-self-start"
           >
-            Investments
+            {t("footer_banner.investments")}
           </a>
           <a
             href="/"
             className="hover:text-white transition-colors duration-300 justify-self-center"
           >
-            Projects
+            {t("footer_banner.projects")}
           </a>
           <a
             href="/"
             className="hover:text-white transition-colors duration-300 justify-self-end"
           >
-            Technologies
+            {t("footer_banner.technologies")}
           </a>
         </footer>
       </div>

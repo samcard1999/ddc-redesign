@@ -14,6 +14,7 @@ import Footer from "./Footer";
 import PrimaryButton from "./buttons/PrimaryButton";
 import { AnimatePresence, motion } from "framer-motion";
 import { useSplitWords } from "./Hooks/useSplitWords";
+import { useTranslation } from "react-i18next";
 
 const projects = [
   {
@@ -64,6 +65,7 @@ const Projects = () => {
   const [topValue, setTopValue] = useState(0);
   const [bottomValue, setBottomValue] = useState(0);
   const [isDesktop, setIsDesktop] = useState(false);
+  const { t } = useTranslation();
   useSplitWords(".split-words");
   useLayoutEffect(() => {
     const mq = window.matchMedia("(min-width: 1024px)");
@@ -109,7 +111,7 @@ const Projects = () => {
       className="w-full h-screen flex items-center justify-center px-8 bg-primary relative"
     >
       <h1 className="split-words absolute left-0 top-28 text-4xl font-bold mb-8 px-8 text-secondary">
-        Projects
+        {t("projects.title")}
       </h1>
       <div className="relative w-full lg:w-[34%] aspect-video text-secondary">
         <span className="absolute -top-4 lg:-top-8 left-0 -translate-x-1/2 -translate-y-1/2  opacity-40 text-2xl">
@@ -272,7 +274,7 @@ const Projects = () => {
           href="/projects"
           className="bg-secondary font-normal !px-4 !py-4 text-lg  hover:text-secondary"
         >
-          View All Projects
+          {t("projects.button")}
         </PrimaryButton>
       </div>
 
@@ -286,7 +288,7 @@ const Projects = () => {
           hover:bg-secondary/50
           hover:text-secondary"
         >
-          View All Projects
+          {t("projects.button")}
         </PrimaryButton>
       </div>
       {/* <div className="projects-pagination absolute bottom-8 left-1/2 -translate-x-1/2 flex space-x-3 z-50" /> */}

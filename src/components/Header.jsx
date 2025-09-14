@@ -159,9 +159,19 @@ const Header = ({ className }) => {
 
         {/* Menú derecho */}
         <div className="flex gap-10 justify-self-end items-center ">
-          <h2 className="font-light  hidden lg:block">
-            <span className="font-bold">English</span> | Spanish
-          </h2>
+          <button className="hidden lg:block" onClick={toggleLanguage}>
+            <span
+              className={`${t.language === "en" ? "font-bold" : "font-thin"}`}
+            >
+              English
+            </span>{" "}
+            |{" "}
+            <span
+              className={`${t.language === "es" ? "font-bold" : "font-thin"}`}
+            >
+              Spanish
+            </span>
+          </button>
           <button
             ref={openMenuRef}
             className="font-bold text-lg bg-transparent lg:hover:text-primary/65 transition-colors duration-200"
@@ -248,7 +258,7 @@ const Header = ({ className }) => {
             <div className="overflow-hidden">
               <div className="nav_items">
                 <HoverAnimatedLink
-                  text={"Home"}
+                  text={t("main_menu.home")}
                   smooth
                   href="/"
                   className="close_menu"
