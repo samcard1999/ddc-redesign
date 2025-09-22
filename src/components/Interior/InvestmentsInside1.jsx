@@ -33,14 +33,14 @@ const items_left = [
 
 const items_right = [
   {
-    title: "Miami Premium - Coconut",
+    title: "Miami Premium ",
     asset_type: "Single family home (6000 sqft)",
     construction_term: "12 meses después de permisos",
     investor_profile: "Inversor doméstico / internacional",
     className: "w-fit -translate-y-[20%]",
   },
   {
-    title: "Miami - Pinecrest",
+    title: "Miami Lux",
     asset_type: "Single family home (7000 sqft)",
     construction_term: "12 meses después de permisos",
     investor_profile: "Inversor doméstico / internacional",

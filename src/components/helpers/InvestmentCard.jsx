@@ -123,14 +123,14 @@ export const sampleData = [
   },
   {
     id: "miami-premium",
-    title: "Miami Premium – Coconut Grove and Pinecrest",
+    title: "Miami Premium ",
     asset_type: "Single family home (6000 sqft)",
     construction_term: "12 meses después de permisos",
     investor_profile: "Inversor doméstico / internacional",
   },
   {
     id: "miami-pinecrest",
-    title: "Miami – Pinecrest",
+    title: "Miami Lux",
     asset_type: "Single family home (7000 sqft)",
     construction_term: "12 meses después de permisos",
     investor_profile: "Inversor doméstico / internacional",
