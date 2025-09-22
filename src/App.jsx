@@ -1,4 +1,4 @@
-import { useLayoutEffect, useState } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
 import "../src/assets/fonts/Noirden-Bold.css";
 import "../src/assets/fonts/Noirden-Regular.css";
 import "../src/assets/fonts/Noirden-Light.css";
@@ -24,10 +24,13 @@ import InvestmentsInside1 from "./components/Interior/InvestmentsInside1";
 import InvestmentsInsideMobile from "./components/Interior/InvestmentsInsideMobile";
 import Investmentss from "./components/helpers/MapWithLinkedCards";
 import InvestmentsInside from "./components/Interior/InvestmentsInside";
+import WhatsappButton from "./components/helpers/WhatsappButton";
 
 gsap.registerPlugin(ScrollTrigger);
 function App() {
   const [isLg, setIsLg] = useState(false);
+  const whatsappRef = useRef(null);
+
   useLayoutEffect(() => {
     const mq = window.matchMedia("(min-width: 1024px)");
     const onChange = (e) => setIsLg(e.matches);
@@ -89,6 +92,7 @@ function App() {
   return (
     <>
       <ReactLenis options={{ duration: 0.9 }} root />
+      <WhatsappButton ref={whatsappRef} />
       <Toaster position="bottom-right" />
 
       <Routes>
