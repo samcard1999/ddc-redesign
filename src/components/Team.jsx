@@ -175,7 +175,7 @@ export default function TeamSection({}) {
                         className={`text-xs lg:text-sm text-primary/80 transition-opacity duration-300
                           ${isActive ? "opacity-100" : "opacity-80"}`}
                       >
-                        {t(`team.team_members.${active.id}.role`)}
+                        {t(`team.team_members.${m.id}.role`)}
                       </p>
                     </div>
                   </motion.button>

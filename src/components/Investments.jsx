@@ -145,7 +145,7 @@ const Investments = () => {
             {t("investments.title")}
           </h1>
           <PrimaryButton
-            href="/investor-hub"
+            href="/investments"
             className="top-btn hidden lg:block bg-primary text-xl !py-3 !px-6 text-secondary hover:text-primary"
           >
             {t("investments.button")}
@@ -154,10 +154,10 @@ const Investments = () => {
         <h2 className="lg:text-xl text-left">
           {t("investments.subtitle")}
           <br />
-          <span>(construction-first)?</span>
+          <span>(construction-first)</span>
         </h2>
         <PrimaryButton
-          href="/investor-hub"
+          href="/investments"
           className="mobile-btn bg-primary mt-6 text-secondary self-center lg:hidden hover:text-primary"
         >
           {t("investments.button")}

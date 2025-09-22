@@ -64,7 +64,7 @@ const OurProcess = () => {
 
           {/* Botón desktop */}
           <PrimaryButton
-            href="/investor-hub"
+            href="/investments"
             className="hidden lg:block text-xl !py-3 !px-6 bg-secondary text-primary hover:bg-secondary/50
           hover:!text-secondary"
           >
@@ -78,7 +78,7 @@ const OurProcess = () => {
 
       {/* Botón mobile */}
       <PrimaryButton
-        href="/investor-hub"
+        href="/investments"
         className="mt-6 self-center lg:hidden bg-secondary text-primary"
       >
         {t("our_process.button")}

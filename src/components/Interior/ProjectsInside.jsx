@@ -173,7 +173,7 @@ export default function ProjectsInside() {
               {/* Location select */}
               <div className="flex items-center justify-between relative">
                 <select
-                  className="bg-transparent border relative border-white/20 text-primary rounded-full w-fit pl-2 pr-5 py-3 text-sm text-dark_blue"
+                  className="appearance-none cursor-pointer bg-transparent border relative border-white/20 text-primary rounded-full w-fit pl-2 pr-8 py-3 text-sm text-dark_blue"
                   onChange={(e) => setLocation(e.target.value)}
                   defaultValue="" // para forzar selección inicial vacía
                 >
@@ -186,7 +186,7 @@ export default function ProjectsInside() {
                   <option value="All"> {t("projects_inside.all")}</option>
                 </select>
                 <svg
-                  className="lg:hidden pointer-events-none absolute right-2 top-1/2 -translate-y-1/2 w-4 h-4 text-primary"
+                  className=" pointer-events-none absolute  right-2 top-1/2 -translate-y-1/2 w-4 h-4 text-primary"
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="2"

@@ -106,7 +106,7 @@ const Header = ({ className }) => {
               [-webkit-mask-image:linear-gradient(to_bottom,black_60%,transparent_100%)]`}
       >
         {/* Logo izquierdo */}
-        <a href="/" className="cursor-pointer justify-self-start">
+        <a className="cursor-pointer justify-self-start">
           <span className="sr-only">Home</span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -133,9 +133,9 @@ const Header = ({ className }) => {
             </g>
           </svg>
 
-          <h2 className="font-light lg:hidden">
+          <button className="font-light lg:hidden" onClick={toggleLanguage}>
             <span className="font-bold">EN</span> | ES
-          </h2>
+          </button>
         </a>
 
         {/* Logo central */}
@@ -224,7 +224,7 @@ const Header = ({ className }) => {
             className="h-28 hidden sm:block"
           />
 
-          <nav className="text-xs lg:mb-[0.87rem]">
+          <nav className="text-xl lg:mb-[0.87rem]">
             <ul className="leading-relaxed">
               <li>
                 <a
@@ -279,7 +279,7 @@ const Header = ({ className }) => {
               <div className="nav_items">
                 <HoverAnimatedLink
                   text={t("main_menu.investments")}
-                  href={"/investor-hub"}
+                  href={"/investments"}
                   className="close_menu"
                 />
               </div>
@@ -315,7 +315,7 @@ const Header = ({ className }) => {
             </div>
           </div>
         </nav>
-        <footer className="nav_footer absolute bottom-0 w-full flex justify-between p-6 lg:p-2 items-center text-xs tracking-[0.2]">
+        <footer className="nav_footer absolute bottom-0 w-full flex justify-between p-6 lg:p-2 items-center lg:text-xl tracking-[0.2]">
           <div className="flex lg:gap-4 w-full lg:w-auto justify-between items-end">
             <a
               className="hover-underline-animation left after:bg-white_gray"
@@ -327,7 +327,7 @@ const Header = ({ className }) => {
 
             <div className="flex flex-col gap-12 items-center justify-end">
               <div className="nav_left_items lg:hidden flex flex-col items-end text-end justify-end  w-full p-0  pt-[0.6rem]">
-                <nav className="text-sm">
+                <nav className="text-base">
                   <ul className="leading-loose">
                     <li>
                       <a

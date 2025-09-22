@@ -16,7 +16,7 @@ const Accordion = ({ onOpenChange, isDark }) => {
   }, [openIndex, onOpenChange]);
   return (
     <div
-      className={`w-full h-full transition-colors duration-500 px-8 lg:px-16 ${
+      className={`w-full h-full transition-colors duration-500 px-8 lg:px-16 2xl-custom:pt-32 ${
         isDark ? "text-primary" : "text-secondary"
       }`}
     >

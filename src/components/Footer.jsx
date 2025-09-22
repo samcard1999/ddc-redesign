@@ -10,7 +10,7 @@ const Footer = ({ className }) => {
     >
       <HoverAnimatedLink
         text={t("footer_banner.investments")}
-        href={"/investor-hub"}
+        href={"/investments"}
         className="justify-self-start"
       />
 

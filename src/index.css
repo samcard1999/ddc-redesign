@@ -59,7 +59,7 @@ img:not([src$=".svg"], [src$=".png"]) {
 
 @media (max-width: 768px) {
   .cover::before {
-    transform: translate3d(0, var(--bg-y), 0) scale(1.4); /* parallax */
+    transform: translate3d(20%, var(--bg-y), 0) scale(1.4); /* parallax */
   }
 }
 
@@ -198,4 +198,13 @@ textarea {
 
 .no-sign {
   display: none;
+}
+
+#our-projects select {
+  @apply text-primary;
+}
+
+/* Safari / Chrome específicos */
+#our-projects select option {
+  @apply bg-primary text-secondary;
 }

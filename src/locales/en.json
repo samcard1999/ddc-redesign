@@ -508,6 +508,16 @@
 },
 "testimonials" : {
   "title": "Testimonials",
-  "button": "Subscribe to our Newsletter"
+  "button": "Subscribe to our Newsletter",
+  "cards": {
+      "1":{
+      "name": "Yahoo! Finance", 
+      "description":"Miami-based leader in eco-friendly modular construction, announced a significant corporate milestone: a 200% year-over-year increase in inquiries for its patented hurricane-resistant, energy-efficient modular building systems."
+    },
+    "2":{
+      "name": "La Vanguardia",
+      "description":"The key is to combine accelerated construction with full financing"
+    }
+  }
 }
 }

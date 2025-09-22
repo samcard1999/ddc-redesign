@@ -8,7 +8,7 @@ import "swiper/css/pagination";
 import Footer from "./Footer";
 import PrimaryButton from "./buttons/PrimaryButton";
 import { useTranslation } from "react-i18next";
-
+import items from "../data/testimonials.json";
 /** Tarjeta (igual que antes) */
 function TestimonialCard({ name, description, stars = 5, bgImage }) {
   return (
@@ -35,32 +35,6 @@ function TestimonialCard({ name, description, stars = 5, bgImage }) {
 const Testimonials = () => {
   const { t } = useTranslation();
   const staticBackground = "/bg/testimonial_card_bg.webp";
-  const items = [
-    {
-      name: "Victor Mesa Jr.",
-      stars: 5,
-      description:
-        " Occaecat mollit reprehenderit aliqua dolor pariatur culpa ut. Ea proidenduis nisi. Commodo ad commodo ex magna. Nostrud labore do quis anim occaecat ullamco.",
-    },
-    {
-      name: "Jane Doe",
-      stars: 5,
-      description:
-        "ommodo pariatur quis ullamco incididunt. Qui pariatur esse pariatur exercitation anim nisi laboris amet.",
-    },
-    {
-      name: "John Smith",
-      stars: 4,
-      description:
-        "Ullamco  sint ex ut est ve elit elit esse. Commodo consequat aliquip enim sit anim proident cupidatat eiusmod exercitation excepteur nisi. Laboris tempor ad surunt laborum. Incididunt enim eu irure ad ex amet.",
-    },
-    {
-      name: "Jane Doe",
-      stars: 5,
-      description:
-        "Reprehenderit deserunt caecat amet mollit magna dolor amet dolor ipsum voluptate pariatur proident.",
-    },
-  ];
 
   return (
     <section
@@ -148,9 +122,9 @@ const Testimonials = () => {
                 className="!w-full !h-full flex items-center justify-center"
               >
                 <TestimonialCard
-                  name={it.name}
-                  description={it.description}
-                  stars={it.stars}
+                  name={t(`testimonials.cards.${idx + 1}.name`)}
+                  description={t(`testimonials.cards.${idx + 1}.description`)}
+                  stars={5}
                   bgImage={staticBackground}
                 />
               </SwiperSlide>

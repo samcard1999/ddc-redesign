@@ -273,7 +273,7 @@ const TechnologiesInside = () => {
         className="flex flex-col w-full gap-4 justify-start items-start px-8 2xl-custom:absolute 2xl-custom:left-0 2xl-custom:top-32 2xl:relative 2xl:inset-auto isolate"
       >
         <div className="flex w-full justify-between items-center text-secondary">
-          <h1 className="reveal-lines lg:text-5xl text-[2.1rem] lg:leading-normal leading-10 font-bold">
+          <h1 className="reveal-lines lg:text-5xl text-[2rem] lg:leading-normal leading-10 font-bold">
             {t("technology_inside.title")}
           </h1>
           <PrimaryButton className="top-cta hidden lg:block bg-secondary text-xl !py-3 !px-6 hover:text-secondary text-primary">

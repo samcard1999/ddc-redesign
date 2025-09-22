@@ -20,6 +20,10 @@ import TeamSectionMobile from "./components/TeamSectionMobile";
 import OurCultureMobile from "./components/OurCultureMobile";
 import Header from "./components/Header";
 import Team from "./components/Team";
+import InvestmentsInside1 from "./components/Interior/InvestmentsInside1";
+import InvestmentsInsideMobile from "./components/Interior/InvestmentsInsideMobile";
+import Investmentss from "./components/helpers/MapWithLinkedCards";
+import InvestmentsInside from "./components/Interior/InvestmentsInside";
 
 gsap.registerPlugin(ScrollTrigger);
 function App() {
@@ -90,8 +94,12 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<Home />} />
-        <Route path="/investments" element={<Home />} />
+        <Route
+          path="/investments"
+          element={isLg ? <InvestmentsInside1 /> : <InvestmentsInsideMobile />}
+        />
         <Route path="/technologies" element={<TechnologiesInside />} />
+
         <Route
           path="/team"
           element={

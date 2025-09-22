@@ -449,6 +449,16 @@
 },
 "testimonials" : {
   "title": "Opiniones",
-  "button": "Suscribirse a nuestra newsletter"
+  "button": "Suscribirse a nuestra newsletter",
+  "cards": {
+    "1":{
+    "name": "Yahoo! Finance", 
+    "description":"Líder con sede en Miami en construcción modular ecológica, anunció un hito corporativo significativo: un aumento del 200% interanual en consultas sobre sus sistemas modulares patentados, resistentes a huracanes y energéticamente eficientes."
+   },
+   "2":{
+    "name": "La Vanguardia",
+    "description":"La clave es combinar construcción acelerada con financiamiento completo."
+   }
+  }
 }
 }
