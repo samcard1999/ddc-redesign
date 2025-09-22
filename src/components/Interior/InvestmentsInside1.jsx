@@ -11,6 +11,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { toast } from "sonner";
 import emailjs from "@emailjs/browser"; // npm i @emailjs/browser
+import { useTranslation } from "react-i18next";
 
 /* -------------------- DATA -------------------- */
 const items_left = [
@@ -214,7 +215,7 @@ function InvestmentDialog({ open, onClose, investmentTitle }) {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="px-5 py-3 bg-[#1E1F20] rounded-full text-primary ring-1 ring-white/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.25)] hover:bg-secondary/20 hover:text-secondary disabled:opacity-60"
+              className="px-5 py-3 bg-[#1E1F20] rounded-full text-primary ring-1 ring-white/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.25)] hover:bg-secondary/20 hover:text-secondary transition-colors duration-200 disabled:opacity-60"
             >
               {isSubmitting ? "Enviando…" : "Send"}
             </button>
@@ -229,7 +230,7 @@ function InvestmentDialog({ open, onClose, investmentTitle }) {
 const InvestmentsInside1 = () => {
   const [open, setOpen] = useState(false);
   const [selectedTitle, setSelectedTitle] = useState("");
-
+  const { t } = useTranslation();
   const handleOpen = (title) => {
     setSelectedTitle(title);
     setOpen(true);
@@ -243,15 +244,21 @@ const InvestmentsInside1 = () => {
 
       <div className="flex gap-2 justify-center items-center h-[80vh]">
         <div className="flex  flex-col ">
-          {items_left.map((card, idx) => {
+          {items_left.map((card, i) => {
             return (
               <InvestmentCard
-                key={`left-${idx}`}
+                key={`left-${i}`}
                 title={card.title}
-                asset_type={card.asset_type}
-                construction_term={card.construction_term}
-                investor_profile={card.investor_profile}
                 className={card.className}
+                asset_type={t(
+                  `investments_inside.card.content.${i + 1}.active`
+                )}
+                construction_term={t(
+                  `investments_inside.card.content.${i + 1}.time`
+                )}
+                investor_profile={t(
+                  `investments_inside.card.content.${i + 1}.profile`
+                )}
                 onAction={() => handleOpen(card.title)}
               />
             );
@@ -265,15 +272,21 @@ const InvestmentsInside1 = () => {
         />
 
         <div className="flex flex-col ">
-          {items_right.map((card, idx) => {
+          {items_right.map((card, i) => {
             return (
               <InvestmentCard
-                key={`right-${idx}`}
+                key={`right-${i}`}
                 title={card.title}
-                asset_type={card.asset_type}
-                construction_term={card.construction_term}
-                investor_profile={card.investor_profile}
                 className={card.className}
+                asset_type={t(
+                  `investments_inside.card.content.${i + 3}.active`
+                )}
+                construction_term={t(
+                  `investments_inside.card.content.${i + 3}.time`
+                )}
+                investor_profile={t(
+                  `investments_inside.card.content.${i + 3}.profile`
+                )}
                 onAction={() => handleOpen(card.title)}
               />
             );

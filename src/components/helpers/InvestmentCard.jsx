@@ -1,5 +1,6 @@
 // InvestmentCards.jsx
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 /**
  * Card individual
@@ -19,6 +20,7 @@ export function InvestmentCard({
   onAction,
   className = "",
 }) {
+  const { t } = useTranslation();
   return (
     <article
       className={`relative w-4/5  min-h-fit  p-4
@@ -35,19 +37,19 @@ export function InvestmentCard({
         <div className="mt-3 space-y-3 text-base leading-5">
           <div>
             <p className="uppercase tracking-wide text-secondary font-semibold text-sm">
-              Tipo de activo
+              {t("investments_inside.card.active")}
             </p>
             <p className="text-secondary text-xs">{asset_type}</p>
           </div>
           <div>
             <p className="uppercase tracking-wide text-secondary font-semibold text-sm">
-              Plazo de obra
+              {t("investments_inside.card.time")}
             </p>
             <p className="text-secondary text-xs">{construction_term}</p>
           </div>
           <div>
             <p className="uppercase tracking-wide text-secondary font-semibold text-sm">
-              Perfil de inversor
+              {t("investments_inside.card.profile")}
             </p>
             <p className="text-secondary text-xs">{investor_profile}</p>
           </div>
@@ -63,7 +65,7 @@ export function InvestmentCard({
               shadow-[inset_0_1px_0_rgba(255,255,255,0.25)]
               ring-1 ring-white/20 text-primary"
           >
-            Talk to an advisor
+            {t("investments_inside.card.button")}
           </button>
         </div>
       </div>

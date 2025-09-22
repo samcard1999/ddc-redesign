@@ -460,5 +460,36 @@
     "description":"La clave es combinar construcción acelerada con financiamiento completo."
    }
   }
+},
+"investments_inside": {
+  "card": {
+    "title": "Planes",
+    "active": "Tipo de activo",
+    "time": "Plazo de obra",
+    "profile": "Perfil de inversor",
+    "button": "Hablar con Ventas",
+    "content":{
+      "1": {
+         "active":"Single family home",
+        "time": "9 meses después de permisos",
+        "profile": "Inversor doméstico / internacional"
+      },
+      "2": {
+         "active":"Single family home",
+        "time": "9 meses después de permisos",
+        "profile": "Inversor doméstico / internacional"
+      },
+      "3": {
+         "active":"Single family home",
+        "time": "12 meses después de permisos",
+        "profile": "Inversor doméstico / internacional"
+      },
+      "4": {
+        "active":"Single family home",
+        "time": "12 meses después de permisos",
+        "profile": "Inversor doméstico / internacional"
+      }
+    }  
+  }
 }
 }

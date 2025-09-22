@@ -519,5 +519,36 @@
       "description":"The key is to combine accelerated construction with full financing"
     }
   }
+},
+"investments_inside": {
+  "card": {
+    "title": "Plans",
+    "active": "Asset type",
+    "time": "Construction timeline",
+    "profile": "Investor profile",
+    "button": "Talk to an advisor",
+    "content": {
+      "1": {
+        "active": "Single family home",
+        "time": "9 months after permits",
+        "profile": "Domestic / international investor"
+      },
+      "2": {
+        "active": "Single family home",
+        "time": "9 months after permits",
+        "profile": "Domestic / international investor"
+      },
+      "3": {
+        "active": "Single family home",
+        "time": "12 months after permits",
+        "profile": "Domestic / international investor"
+      },
+      "4": {
+        "active": "Single family home",
+        "time": "12 months after permits",
+        "profile": "Domestic / international investor"
+      }
+    }
+  }
 }
 }

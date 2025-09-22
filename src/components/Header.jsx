@@ -195,7 +195,7 @@ const Header = ({ className }) => {
       </header>
       <div
         ref={menu1}
-        className="hidden opacity-0 h-[100dvh] w-full bg-dark_blue bg-opacity-[0.98] backdrop-blur-xl bg-secondary/85 fixed top-0 left-0 z-[100] text-white_gray"
+        className="hidden opacity-0 h-[100dvh] w-full bg-dark_blue bg-opacity-[0.98] backdrop-blur-xl bg-secondary/85 fixed top-0 left-0 z-[500] text-white_gray"
       >
         <header className="absolute left-0 top-0 py-8 lg:py-12 px-8  w-full flex items-center">
           <img

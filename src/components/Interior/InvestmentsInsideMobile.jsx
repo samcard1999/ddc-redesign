@@ -11,6 +11,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { toast } from "sonner";
 import emailjs from "@emailjs/browser"; // npm i @emailjs/browser
+import { useTranslation } from "react-i18next";
 
 /* -------------------- Dialog con Zod + RHF + EmailJS -------------------- */
 const dialogSchema = z.object({
@@ -181,7 +182,7 @@ function InvestmentDialog({ open, onClose, investmentTitle }) {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="px-5 py-3 bg-[#1E1F20] text-primary ring-1 ring-white/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.25)] rounded-full hover:bg-secondary/20 hover:text-secondary disabled:opacity-60"
+              className="px-5 py-3 bg-[#1E1F20] text-primary ring-1 ring-white/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.25)] rounded-full hover:bg-secondary/20 hover:text-secondary transition-colors duration-200 disabled:opacity-60"
             >
               {isSubmitting ? "Enviando…" : "Send"}
             </button>
@@ -196,6 +197,7 @@ function InvestmentDialog({ open, onClose, investmentTitle }) {
 const InvestmentsInsideMobile = () => {
   const [open, setOpen] = useState(false);
   const [selectedTitle, setSelectedTitle] = useState("");
+  const { t } = useTranslation();
 
   const handleOpen = (title) => {
     setSelectedTitle(title);
@@ -215,14 +217,20 @@ const InvestmentsInsideMobile = () => {
       />
 
       <div className="flex flex-col justify-center items-center gap-8">
-        <h2 className="text-5xl font-bold self-start">Plans</h2>
+        <h2 className="text-5xl font-bold self-start">
+          {t("investments_inside.card.title")}
+        </h2>
         {items.map((card, i) => (
           <InvestmentCard
             key={i}
             title={card.title}
-            asset_type={card.asset_type}
-            construction_term={card.construction_term}
-            investor_profile={card.investor_profile}
+            asset_type={t(`investments_inside.card.content.${i + 1}.active`)}
+            construction_term={t(
+              `investments_inside.card.content.${i + 1}.time`
+            )}
+            investor_profile={t(
+              `investments_inside.card.content.${i + 1}.profile`
+            )}
             onAction={() => handleOpen(card.title)}
           />
         ))}
