@@ -121,7 +121,10 @@ const Cover = () => {
         <h2 className="justify-self-start self-start  lg:max-w-[60%] text-sm lg:text-lg">
           {t("cover.description")}
         </h2>
-        <PrimaryButton className="text-primary justify-self-end bg-gray-200 hover:!bg-primary hover:text-secondary transition-all duration-200 bg-opacity-15">
+        <PrimaryButton
+          href="/investments/#appointment"
+          className="text-primary justify-self-end bg-gray-200 hover:!bg-primary hover:text-secondary transition-all duration-200 bg-opacity-15"
+        >
           {t("cover.button")}
         </PrimaryButton>
       </div>

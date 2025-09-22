@@ -62,7 +62,7 @@ const InvestmentsInside1 = () => {
 
         <img
           className="h-full object-contain h-f"
-          src="assets/investments/investment_map1.png"
+          src="/assets/investments/investment_map1.png"
           alt="investment map"
         />
         <div className="flex flex-col ">

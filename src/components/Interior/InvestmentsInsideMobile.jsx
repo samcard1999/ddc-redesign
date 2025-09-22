@@ -195,7 +195,7 @@ const InvestmentsInsideMobile = () => {
       <Header className={"is-clear"} />
 
       <img
-        src="assets/investments/investment_map_mobile.png"
+        src="/assets/investments/investment_map_mobile.png"
         alt="investment map mobile"
         className="w-full h-auto object-contain"
       />

@@ -276,7 +276,10 @@ const TechnologiesInside = () => {
           <h1 className="reveal-lines lg:text-5xl text-[2rem] lg:leading-normal leading-10 font-bold">
             {t("technology_inside.title")}
           </h1>
-          <PrimaryButton className="top-cta hidden lg:block bg-secondary text-xl !py-3 !px-6 hover:text-secondary text-primary">
+          <PrimaryButton
+            href="/investments/#appointment"
+            className="top-cta hidden lg:block bg-secondary text-xl !py-3 !px-6 hover:text-secondary text-primary"
+          >
             {t("technology_inside.button")}
           </PrimaryButton>
         </div>
@@ -287,7 +290,10 @@ const TechnologiesInside = () => {
           </Trans>
         </h2>
 
-        <PrimaryButton className="mobile-cta bg-secondary mt-6 text-primary lg:hidden">
+        <PrimaryButton
+          href="/investments/#appointment"
+          className="mobile-cta bg-secondary mt-6 text-primary lg:hidden"
+        >
           {t("technology_inside.button")}
         </PrimaryButton>
       </div>
