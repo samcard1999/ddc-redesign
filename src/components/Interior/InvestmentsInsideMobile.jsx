@@ -105,7 +105,21 @@ function InvestmentDialog({ open, onClose, investmentTitle }) {
           onClick={onClose}
           className="absolute top-3 right-3 h-8 w-8 grid place-items-center text-secondary/80 hover:text-secondary"
         >
-          ×
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="24"
+            height="24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="h-5 w-5 text-secondary"
+            aria-hidden="true"
+          >
+            <path d="M18 6L6 18M6 6l12 12" />
+          </svg>
         </button>
 
         <h3
@@ -167,7 +181,7 @@ function InvestmentDialog({ open, onClose, investmentTitle }) {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="px-5 py-3 bg-[#1E1F20] text-primary ring-1 ring-white/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.25)] rounded-none hover:bg-secondary/20 hover:text-secondary disabled:opacity-60"
+              className="px-5 py-3 bg-[#1E1F20] text-primary ring-1 ring-white/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.25)] rounded-full hover:bg-secondary/20 hover:text-secondary disabled:opacity-60"
             >
               {isSubmitting ? "Enviando…" : "Send"}
             </button>
