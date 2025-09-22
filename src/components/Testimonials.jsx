@@ -47,16 +47,16 @@ const Testimonials = () => {
 
       {/* Wrapper con perspectiva y láminas detrás (decorativo opcional) */}
       <div className="relative h-[60%] lg:h-[65%] aspect-[9/13]">
-        <span className="absolute -top-16 lg:-top-8 left-0 lg:-left-8 -translate-x-1/2  text-secondary opacity-40 text-2xl ">
+        <span className="absolute -top-8 lg:-top-8 left-0 lg:-left-8 -translate-x-1/2  text-secondary opacity-40 text-2xl ">
           +
         </span>
-        <span className="absolute -top-16 lg:-top-8 right-0 lg:-right-8 translate-x-1/2 text-secondary opacity-40 text-2xl ">
+        <span className="absolute -top-8 lg:-top-8 right-0 lg:-right-8 translate-x-1/2 text-secondary opacity-40 text-2xl ">
           +
         </span>
-        <span className="absolute -bottom-16 lg:-bottom-8 left-0 lg:-left-8 -translate-x-1/2  text-secondary opacity-40 text-2xl ">
+        <span className="absolute -bottom-8 lg:-bottom-8 left-0 lg:-left-8 -translate-x-1/2  text-secondary opacity-40 text-2xl ">
           +
         </span>
-        <span className="absolute -bottom-16 lg:-bottom-8 right-0 lg:-right-8 translate-x-1/2  text-secondary opacity-40 text-2xl ">
+        <span className="absolute -bottom-8 lg:-bottom-8 right-0 lg:-right-8 translate-x-1/2  text-secondary opacity-40 text-2xl ">
           +
         </span>
 
