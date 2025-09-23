@@ -110,7 +110,7 @@ const Cover = () => {
 
         <h1
           ref={buildRef}
-          className="absolute -top-2 lg:-top-4 left-0 pointer-events-none select-none will-change-transform
+          className="absolute -top-1 lg:-top-4 left-0 pointer-events-none select-none will-change-transform
                      text-transparent font-extrabold text-3xl lg:text-8xl whitespace-nowrap"
           style={{ WebkitTextStroke: "1px #c2c7cf" }}
         >
