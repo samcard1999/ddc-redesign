@@ -17,9 +17,10 @@ const Cover = () => {
   const rightRef = useRef(null);
   const tlRef = useRef(null);
 
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   useLayoutEffect(() => {
+    const isES = i18n.language?.startsWith("es");
     const build = buildRef.current;
     const container = containerRef.current;
     const section = sectionRef.current;
@@ -52,8 +53,10 @@ const Cover = () => {
       // altura relativa: que quede por encima de las palabras (responsive)
       const yOffset = -(b.height + l.height) * 0.5;
 
-      const xLeft = l.left - c.left;
-      const xCenter = m.left + (m.width - b.width) / 2 - c.left;
+      const xLeft = isES ? l.right - b.width - c.left : l.left - c.left;
+      const xCenter = isES
+        ? m.right - b.width - c.left
+        : m.left + (m.width - b.width) / 2 - c.left;
       const xRight = r.right - b.width - c.left;
 
       gsap.set(build, { x: xLeft, y: yOffset });
@@ -82,7 +85,7 @@ const Cover = () => {
       tlRef.current && tlRef.current.kill();
       ctx.revert(); // limpia ScrollTrigger/tweens del parallax
     };
-  }, []);
+  }, [i18n.language]);
 
   return (
     <section

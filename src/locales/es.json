@@ -147,10 +147,10 @@
     "projects": "Proyectos"
   },
     "cover": {
-    "build": "Crea",
+    "build": "Construye",
     "faster" :"Rápido ",
-    "stronger":"Robusto",
-    "smarter": "Versátil",
+    "stronger":"Eficiente",
+    "smarter": "Verde",
     "description": "La forma moderna de construir: hermosa, resistente y confiablemente a tiempo.",
     "button": "Reserva una intro(30 min)"
   },
@@ -162,7 +162,7 @@
   "about": {
     "title": "Sobre Nosotros",
     "subtitle": "El futuro no se espera, se construye",
-    "text": "DDC Developments está transformando la construcción con un firme compromiso con la responsabilidad ambiental. Implementamos tecnologías de vanguardia, incluidos sistemas modulares de las instalaciones de nuestros socios en Florida, para ofrecer soluciones innovadoras y sostenibles que redefinen la eficiencia y el rendimiento; este enfoque disruptivo basado en asociaciones nos posiciona como líderes de la industria que están moldeando el futuro de la construcción."
+    "text": "En DDC Developments construimos para un futuro más limpio. Utilizamos sistemas modulares para lograr precisión, velocidad y calidad constante, elevando el estándar de valor para inversores y comunidades en Florida."
   },
   "technology": {
     "title": "Los números no mienten",

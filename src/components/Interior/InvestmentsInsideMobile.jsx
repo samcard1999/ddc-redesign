@@ -51,7 +51,7 @@ function InvestmentDialog({ open, onClose, investmentTitle }) {
     try {
       // Enviar con EmailJS usando variables de entorno (Vite)
       const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-      const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+      const templateId = import.meta.env.VITE_EMAILJS_INVESTMENTS_TEMPLATE_ID;
       const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
       if (!serviceId || !templateId || !publicKey) {
