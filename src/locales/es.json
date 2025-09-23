@@ -414,6 +414,22 @@
   "wilfredo_alvarado": {
     "role": "Director Creativo",
     "description": "Wilfredo convierte conceptos en experiencias visuales. Desde renders fotorrealistas hasta vistas en realidad aumentada, permite que los clientes recorran el proyecto antes de construirlo, elevando cada decisión con claridad y precisión técnica."
+  },
+    "esteban_villavicencio": {
+    "role": "Ingeniero Civil Senior",
+    "description": "Esteban convierte la visión en una realidad construible y conforme al código. Lidera el alcance civil, desde cimientos, nivelación y drenaje hasta la coordinación estructural para instalaciones modulares, asegurando que cada proyecto cumpla con el Código de Construcción de Florida y los requisitos locales. Trabajando estrechamente con nuestro COO, Gerente de Proyecto y Contratista General Senior, optimiza los envíos, inspecciones y RFIs, aplicando ingeniería de valor a las conexiones y trabajos en el sitio para mantener los cronogramas ajustados sin comprometer la seguridad o la calidad."
+  },
+  "tommy_mayedo": {
+    "role": "Asociado de Ventas",
+    "description": "Tommy ayuda a convertir las primeras conversaciones en clientes comprometidos. Bajo el liderazgo de nuestra Directora de Ventas, responde rápidamente a consultas, califica oportunidades y guía a compradores e inversores a través de pasos claros. Con base en el dinámico mercado de Florida, su mentalidad de servicio y seguimiento aseguran que cada transacción avance sin problemas."
+  },
+  "blanca_mendoza": {
+    "role": "Asociada de Ventas",
+    "description": "Blanca transforma el interés en decisiones bien informadas. Gestiona el seguimiento de prospectos, visitas a propiedades y puntos de contacto con inversores con claridad y calidez, asegurando que cada paso esté organizado y libre de estrés. Alineada con la estrategia de nuestra Directora de Ventas, mantiene pipelines impecables y una comunicación proactiva para que los clientes sientan la distinción y calidad que definen a DDC."
+  },
+  "anisleidy_valle": {
+    "role": "Líder de Recursos Humanos",
+    "description": "Anisleidy construye una sólida cultura de personas en DDC. Lidera la contratación, la incorporación y el cumplimiento, y apoya a los equipos que utilizan sistemas modulares para entregar cronogramas predecibles y resultados de alta calidad."
   }
 }
 },
