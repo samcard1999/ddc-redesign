@@ -12,8 +12,8 @@ const WhatsappButton = forwardRef((props, ref) => {
       <div
         ref={ref}
         className={`fixed z-[200] ${
-          props.className ?? "bottom-12"
-        } right-4 w-20 h-20 flex items-center justify-centers transition-all duration-500`}
+          props.className ?? "bottom-8 lg:bottom-12"
+        } right-4 w-16 h-16 flex items-center justify-centers transition-all duration-500`}
       >
         <DotLottieReact
           className="w-full h-full"
