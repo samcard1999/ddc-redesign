@@ -48,17 +48,27 @@ const items_right = [
   },
 ];
 
-/* -------------------- Dialog con Zod + RHF + EmailJS -------------------- */
-const dialogSchema = z.object({
-  name: z
-    .string()
-    .min(2, "Por favor ingresa tu nombre (mín. 2 caracteres)")
-    .max(80, "Nombre demasiado largo"),
-  email: z.string().email("Correo inválido").min(3, "Correo requerido"),
-});
-
 function InvestmentDialog({ open, onClose, investmentTitle }) {
   const panelRef = useRef(null);
+  const { t } = useTranslation();
+
+  /* -------------------- Dialog con Zod + RHF + EmailJS -------------------- */
+  const dialogSchema = z.object({
+    name: z
+      .string()
+      .min(2, t("investments_inside.form.validation.name"))
+      .max(80, "Nombre demasiado largo"),
+    email: z
+      .string()
+      .email(t("investments_inside.form.validation.email.invalid"))
+      .min(3, t("investments_inside.form.validation.email.required")),
+    phone: z
+      .string()
+      .regex(
+        /^[0-9+()\-\s]{7,20}$/,
+        t("investments_inside.form.validation.phone")
+      ),
+  });
 
   const {
     register,
@@ -67,7 +77,7 @@ function InvestmentDialog({ open, onClose, investmentTitle }) {
     formState: { errors, isSubmitting },
   } = useForm({
     resolver: zodResolver(dialogSchema),
-    defaultValues: { name: "", email: "" },
+    defaultValues: { name: "", email: "", phone: "" },
   });
 
   useEffect(() => {
@@ -94,6 +104,7 @@ function InvestmentDialog({ open, onClose, investmentTitle }) {
       const templateParams = {
         from_name: data.name,
         reply_to: data.email,
+        phone: data.phone,
         investment_title: investmentTitle,
         source: "investments_inside1_dialog",
       };
@@ -146,10 +157,10 @@ function InvestmentDialog({ open, onClose, investmentTitle }) {
             height="24"
             fill="none"
             stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="h-5 w-5 text-secondary"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="h-5 w-5 text-secondary"
             aria-hidden="true"
           >
             <path d="M18 6L6 18M6 6l12 12" />
@@ -160,27 +171,28 @@ function InvestmentDialog({ open, onClose, investmentTitle }) {
           id="investment-dialog-title"
           className="text-2xl font-semibold tracking-tight"
         >
-          Talk to an advisor
+          {t("investments_inside.form.title")}
         </h3>
         <p className="mt-1 text-sm opacity-80">
-          Plan seleccionado:{" "}
+          {t("investments_inside.form.subtitle")}
           <span className="font-medium">{investmentTitle}</span>
         </p>
 
         <form onSubmit={handleSubmit(onSubmit)} className="mt-6 space-y-5">
+          {/* Nombre */}
           <div className="flex flex-col gap-2">
             <label
               htmlFor="name"
               className="text-xs uppercase tracking-wide opacity-80"
             >
-              Nombre
+              {t("investments_inside.form.name")}
             </label>
             <input
               id="name"
               type="text"
               {...register("name")}
               className="w-full bg-transparent text-secondary p-3 border border-secondary/40 focus:border-secondary outline-none rounded-none"
-              placeholder="Tu nombre"
+              placeholder={t("investments_inside.form.name_placeholder")}
               autoFocus
             />
             {errors.name && (
@@ -190,19 +202,20 @@ function InvestmentDialog({ open, onClose, investmentTitle }) {
             )}
           </div>
 
+          {/* Email */}
           <div className="flex flex-col gap-2">
             <label
               htmlFor="email"
               className="text-xs uppercase tracking-wide opacity-80"
             >
-              Correo
+              {t("investments_inside.form.mail")}
             </label>
             <input
               id="email"
               type="email"
               {...register("email")}
               className="w-full bg-transparent text-secondary p-3 border border-secondary/40 focus:border-secondary outline-none rounded-none"
-              placeholder="tucorreo@dominio.com"
+              placeholder={t("investments_inside.form.mail_placeholder")}
             />
             {errors.email && (
               <span className="text-rose-400 text-xs">
@@ -211,13 +224,38 @@ function InvestmentDialog({ open, onClose, investmentTitle }) {
             )}
           </div>
 
+          {/* Phone */}
+          <div className="flex flex-col gap-2">
+            <label
+              htmlFor="phone"
+              className="text-xs uppercase tracking-wide opacity-80"
+            >
+              {t("investments_inside.form.phone")}
+            </label>
+            <input
+              id="phone"
+              type="tel"
+              {...register("phone")}
+              className="w-full bg-transparent text-secondary p-3 border border-secondary/40 focus:border-secondary outline-none rounded-none"
+              placeholder={t("investments_inside.form.phone_placeholder")}
+            />
+            {errors.phone && (
+              <span className="text-rose-400 text-xs">
+                {errors.phone.message}
+              </span>
+            )}
+          </div>
+
+          {/* Botón */}
           <div className="pt-2 flex items-center gap-3">
             <button
               type="submit"
               disabled={isSubmitting}
               className="px-5 py-3 bg-[#1E1F20] rounded-full text-primary ring-1 ring-white/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.25)] hover:bg-secondary/20 hover:text-secondary transition-colors duration-200 disabled:opacity-60"
             >
-              {isSubmitting ? "Enviando…" : "Send"}
+              {isSubmitting
+                ? t("investments_inside.form.button_sending")
+                : t("investments_inside.form.button")}
             </button>
           </div>
         </form>
@@ -242,8 +280,8 @@ const InvestmentsInside1 = () => {
       <AnimatedBackground />
       <Header className={"is-clear"} />
 
-      <div className="flex gap-2 justify-center items-center h-[80vh]">
-        <div className="flex  flex-col ">
+      <div className="flex gap-2 lg:scale-75 xl:scale-100 justify-center items-center h-[80vh]">
+        <div className="flex flex-col ">
           {items_left.map((card, i) => {
             return (
               <InvestmentCard
@@ -266,7 +304,7 @@ const InvestmentsInside1 = () => {
         </div>
 
         <img
-          className="h-full object-contain h-f"
+          className="h-full object-contain"
           src="/assets/investments/investment_map1.png"
           alt="investment map"
         />

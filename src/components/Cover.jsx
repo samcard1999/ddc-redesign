@@ -57,7 +57,8 @@ const Cover = () => {
       const xCenter = m.left + (m.width - b.width) / 2 - c.left; // centrada con la segunda
       const xRight = r.right - b.width - c.left; // derecha con la tercera
 
-      gsap.set(build, { x: xLeft, y: yOffset });
+      // 👉 aplicar set inicial y mostrar el build
+      gsap.set(build, { x: xLeft, y: yOffset, visibility: "visible" });
 
       tlRef.current = gsap
         .timeline({
@@ -112,7 +113,10 @@ const Cover = () => {
           ref={buildRef}
           className="absolute -top-1 lg:-top-4 left-0 pointer-events-none select-none will-change-transform
                      text-transparent font-extrabold text-3xl lg:text-8xl whitespace-nowrap"
-          style={{ WebkitTextStroke: "1px #c2c7cf" }}
+          style={{
+            WebkitTextStroke: "1px #c2c7cf",
+            visibility: "hidden", // 👈 oculto hasta que gsap lo setee
+          }}
         >
           {t("cover.build")}
         </h1>

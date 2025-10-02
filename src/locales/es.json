@@ -474,7 +474,19 @@
    "2":{
     "name": "La Vanguardia",
     "description":"La clave es combinar construcción acelerada con financiamiento completo."
-   }
+   },
+      "3": {
+          "name": "Tech Bullion",
+          "description": "Al prefabricar estos componentes fuera del sitio, DDC Developments agiliza el ensamblaje en el lugar, permitiendo que los proyectos se completen en meses en lugar de años."
+        },
+       "4": {
+          "name": "Business Insider",
+          "description": "En una región donde los huracanes y los desafíos climáticos dominan los titulares, DDC Developments emerge como un cambio de juego para el panorama inmobiliario del sur de Florida."
+        },
+           "5": {
+          "name": "Barchart ",
+          "description": "Más allá de la resiliencia, DDC prioriza la eficiencia energética. El aislamiento superior de los paneles reduce las demandas de calefacción y refrigeración en un 30%, alineándose con certificaciones globales de construcción ecológica como LEED."
+        }
   }
 },
 "investments_inside": {
@@ -506,6 +518,26 @@
         "profile": "Inversor doméstico / internacional"
       }
     }  
+  },
+  "form" : {
+    "title": "Habla con un supervisor",
+    "subtitle": "Plan seleccionado: ",
+    "name":"Nombre",
+    "name_placeholder": "Tu Nombre",
+    "mail": "Correo",
+    "mail_placeholder": "Tu Correo",
+    "phone": "Teléfono",
+    "phone_placeholder": "Tu número de teléfono",
+    "button": "Enviar",
+    "button_sending": "Enviando...",
+    "validation":{
+    "name": "Por favor ingresa tu nombre (mín. 2 caracteres)",
+    "email": {
+      "invalid": "Correo inválido",
+      "required": "Correo requerido"
+    },
+    "phone": "Número de teléfono inválido"
+    }
   }
 }
 }
