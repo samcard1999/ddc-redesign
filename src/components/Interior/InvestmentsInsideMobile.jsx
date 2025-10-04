@@ -24,6 +24,25 @@ const dialogSchema = z.object({
 
 function InvestmentDialog({ open, onClose, investmentTitle }) {
   const panelRef = useRef(null);
+  const { t } = useTranslation();
+
+  /* -------------------- Dialog con Zod + RHF + EmailJS -------------------- */
+  const dialogSchema = z.object({
+    name: z
+      .string()
+      .min(2, t("investments_inside.form.validation.name"))
+      .max(80, "Nombre demasiado largo"),
+    email: z
+      .string()
+      .email(t("investments_inside.form.validation.email.invalid"))
+      .min(3, t("investments_inside.form.validation.email.required")),
+    phone: z
+      .string()
+      .regex(
+        /^[0-9+()\-\s]{7,20}$/,
+        t("investments_inside.form.validation.phone")
+      ),
+  });
 
   const {
     register,
@@ -32,7 +51,7 @@ function InvestmentDialog({ open, onClose, investmentTitle }) {
     formState: { errors, isSubmitting },
   } = useForm({
     resolver: zodResolver(dialogSchema),
-    defaultValues: { name: "", email: "" },
+    defaultValues: { name: "", email: "", phone: "" },
   });
 
   useEffect(() => {
@@ -43,13 +62,11 @@ function InvestmentDialog({ open, onClose, investmentTitle }) {
   }, [open, onClose]);
 
   useEffect(() => {
-    // limpiar cuando se cierre
     if (!open) reset();
   }, [open, reset]);
 
   const onSubmit = async (data) => {
     try {
-      // Enviar con EmailJS usando variables de entorno (Vite)
       const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
       const templateId = import.meta.env.VITE_EMAILJS_INVESTMENTS_TEMPLATE_ID;
       const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
@@ -61,8 +78,9 @@ function InvestmentDialog({ open, onClose, investmentTitle }) {
       const templateParams = {
         from_name: data.name,
         reply_to: data.email,
+        phone: data.phone,
         investment_title: investmentTitle,
-        source: "investments_mobile_dialog",
+        source: "investments_inside1_dialog",
       };
 
       const res = await emailjs.send(serviceId, templateId, templateParams, {
@@ -113,10 +131,10 @@ function InvestmentDialog({ open, onClose, investmentTitle }) {
             height="24"
             fill="none"
             stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="h-5 w-5 text-secondary"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="h-5 w-5 text-secondary"
             aria-hidden="true"
           >
             <path d="M18 6L6 18M6 6l12 12" />
@@ -127,27 +145,28 @@ function InvestmentDialog({ open, onClose, investmentTitle }) {
           id="investment-dialog-title"
           className="text-2xl font-semibold tracking-tight"
         >
-          Talk to an advisor
+          {t("investments_inside.form.title")}
         </h3>
         <p className="mt-1 text-sm opacity-80">
-          Plan seleccionado:{" "}
+          {t("investments_inside.form.subtitle")}
           <span className="font-medium">{investmentTitle}</span>
         </p>
 
         <form onSubmit={handleSubmit(onSubmit)} className="mt-6 space-y-5">
+          {/* Nombre */}
           <div className="flex flex-col gap-2">
             <label
               htmlFor="name"
               className="text-xs uppercase tracking-wide opacity-80"
             >
-              Nombre
+              {t("investments_inside.form.name")}
             </label>
             <input
               id="name"
               type="text"
               {...register("name")}
               className="w-full bg-transparent text-secondary p-3 border border-secondary/40 focus:border-secondary outline-none rounded-none"
-              placeholder="Tu nombre"
+              placeholder={t("investments_inside.form.name_placeholder")}
               autoFocus
             />
             {errors.name && (
@@ -157,19 +176,20 @@ function InvestmentDialog({ open, onClose, investmentTitle }) {
             )}
           </div>
 
+          {/* Email */}
           <div className="flex flex-col gap-2">
             <label
               htmlFor="email"
               className="text-xs uppercase tracking-wide opacity-80"
             >
-              Correo
+              {t("investments_inside.form.mail")}
             </label>
             <input
               id="email"
               type="email"
               {...register("email")}
               className="w-full bg-transparent text-secondary p-3 border border-secondary/40 focus:border-secondary outline-none rounded-none"
-              placeholder="tucorreo@dominio.com"
+              placeholder={t("investments_inside.form.mail_placeholder")}
             />
             {errors.email && (
               <span className="text-rose-400 text-xs">
@@ -178,13 +198,38 @@ function InvestmentDialog({ open, onClose, investmentTitle }) {
             )}
           </div>
 
+          {/* Phone */}
+          <div className="flex flex-col gap-2">
+            <label
+              htmlFor="phone"
+              className="text-xs uppercase tracking-wide opacity-80"
+            >
+              {t("investments_inside.form.phone")}
+            </label>
+            <input
+              id="phone"
+              type="tel"
+              {...register("phone")}
+              className="w-full bg-transparent text-secondary p-3 border border-secondary/40 focus:border-secondary outline-none rounded-none"
+              placeholder={t("investments_inside.form.phone_placeholder")}
+            />
+            {errors.phone && (
+              <span className="text-rose-400 text-xs">
+                {errors.phone.message}
+              </span>
+            )}
+          </div>
+
+          {/* Botón */}
           <div className="pt-2 flex items-center gap-3">
             <button
               type="submit"
               disabled={isSubmitting}
-              className="px-5 py-3 bg-[#1E1F20] text-primary ring-1 ring-white/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.25)] rounded-full hover:bg-secondary/20 hover:text-secondary transition-colors duration-200 disabled:opacity-60"
+              className="px-5 py-3 bg-[#1E1F20] rounded-full text-primary ring-1 ring-white/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.25)] hover:bg-secondary/20 hover:text-secondary transition-colors duration-200 disabled:opacity-60"
             >
-              {isSubmitting ? "Enviando…" : "Send"}
+              {isSubmitting
+                ? t("investments_inside.form.button_sending")
+                : t("investments_inside.form.button")}
             </button>
           </div>
         </form>
