@@ -583,8 +583,19 @@
       "invalid": "Invalid email",
       "required": "Email is required"
     },
-    "phone": "Invalid phone number"
-    }
+    "phone": "Invalid phone number",
+   "select": "Select an option"
+    },
+     "first_select" : "What is your current net budget for investing in real estate in Florida?",
+    "first_select_3" : "More than $1,000,000",
+    "second_select": "Do you currently have the funds available?",
+    "second_select_1": "Yes, I have the capital available",
+    "second_select_2": "No, I'm looking for financing options",
+    "second_select_3": "I have a stake and am open to financing",
+    "third_select": "Do you have a company registered in the US?",
+    "third_select_1" : "Yes",
+    "third_select_2" : "No, but I'm interested in opening one",
+    "third_select_3" : "I have no intention of opening one for now"
   }
 }
 }

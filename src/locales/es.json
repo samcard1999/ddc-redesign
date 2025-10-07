@@ -536,8 +536,21 @@
       "invalid": "Correo inválido",
       "required": "Correo requerido"
     },
-    "phone": "Número de teléfono inválido"
-    }
+    "phone": "Número de teléfono inválido",
+    "select": "Seleccione una opción"
+    
+  },
+  "first_select" : "¿Cuál es tu presupuesto neto actual para invertir en bienes raíces en Florida?",
+  "first_select_3" : "Más de $1,000,000",
+  "second_select": "¿Actualmente tienes los fondos disponibles?",
+  "second_select_1": "Sí, tengo el capital disponible",
+  "second_select_2": "No, estoy buscando opciones de financiamiento",
+  "second_select_3": "Tengo una parte y estoy abierto a financiamiento",
+  "third_select": "¿Tienes una empresa registrada en los EE.UU.?",
+  "third_select_1" : "Sí",
+  "third_select_2" : "No, pero estoy interesado en abrir una",
+  "third_select_3" : "No tengo intención de abrir una por ahora"
+
   }
 }
 }

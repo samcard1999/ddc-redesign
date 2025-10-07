@@ -68,6 +68,10 @@ function InvestmentDialog({ open, onClose, investmentTitle }) {
         /^[0-9+()\-\s]{7,20}$/,
         t("investments_inside.form.validation.phone")
       ),
+    // ✅ nuevos campos obligatorios
+    budget: z.string().min(1, t("investments_inside.form.validation.select")),
+    funds: z.string().min(1, t("investments_inside.form.validation.select")),
+    company: z.string().min(1, t("investments_inside.form.validation.select")),
   });
 
   const {
@@ -77,7 +81,14 @@ function InvestmentDialog({ open, onClose, investmentTitle }) {
     formState: { errors, isSubmitting },
   } = useForm({
     resolver: zodResolver(dialogSchema),
-    defaultValues: { name: "", email: "", phone: "" },
+    defaultValues: {
+      name: "",
+      email: "",
+      phone: "",
+      budget: "",
+      funds: "",
+      company: "",
+    },
   });
 
   useEffect(() => {
@@ -106,6 +117,9 @@ function InvestmentDialog({ open, onClose, investmentTitle }) {
         reply_to: data.email,
         phone: data.phone,
         investment_title: investmentTitle,
+        budget: data.budget,
+        funds: data.funds,
+        company: data.company,
         source: "investments_inside1_dialog",
       };
 
@@ -133,16 +147,17 @@ function InvestmentDialog({ open, onClose, investmentTitle }) {
 
   return (
     <div
-      className="fixed inset-0 z-[999] grid place-items-center bg-black/50 backdrop-blur-sm"
+      className="fixed inset-0 z-[999] flex items-center justify-center h-full bg-black/50 backdrop-blur-sm overflow-y-auto"
       onClick={onClose}
       aria-modal="true"
       role="dialog"
+      data-lenis-prevent
       aria-labelledby="investment-dialog-title"
     >
       <div
         ref={panelRef}
         onClick={(e) => e.stopPropagation()}
-        className="relative w-[92vw] max-w-[520px] bg-primary text-secondary p-6 sm:p-8 shadow-2xl rounded-none"
+        className="relative w-[92vw] max-w-[520px] max-h-[90vh] overflow-y-auto bg-primary text-secondary p-6 sm:p-8 shadow-2xl rounded-none"
       >
         {/* Cerrar */}
         <button
@@ -245,6 +260,76 @@ function InvestmentDialog({ open, onClose, investmentTitle }) {
               </span>
             )}
           </div>
+          <div className="flex flex-col gap-2">
+            <label className="text-sm font-medium">
+              {t("investments_inside.form.first_select")}
+            </label>
+            <div className="flex flex-col gap-1">
+              {[
+                "$200,000 – $300,000",
+                "$300,000 – $500,000",
+                t("investments_inside.form.first_select_3"),
+              ].map((opt) => (
+                <label key={opt} className="flex items-center gap-2">
+                  <input type="radio" value={opt} {...register("budget")} />
+                  {opt}
+                </label>
+              ))}
+            </div>
+            {errors.budget && (
+              <span className="text-rose-400 text-xs">
+                {errors.budget.message}
+              </span>
+            )}
+          </div>
+
+          {/* Pregunta 2 */}
+          <div className="flex flex-col gap-2">
+            <label className="text-sm font-medium">
+              {t("investments_inside.form.second_select")}
+            </label>
+            <div className="flex flex-col gap-1">
+              {[
+                t("investments_inside.form.second_select_1"),
+                t("investments_inside.form.second_select_2"),
+                t("investments_inside.form.second_select_3"),
+              ].map((opt) => (
+                <label key={opt} className="flex items-center gap-2">
+                  <input type="radio" value={opt} {...register("funds")} />
+                  {opt}
+                </label>
+              ))}
+            </div>
+            {errors.funds && (
+              <span className="text-rose-400 text-xs">
+                {errors.funds.message}
+              </span>
+            )}
+          </div>
+
+          {/* Pregunta 3 */}
+          <div className="flex flex-col gap-2">
+            <label className="text-sm font-medium">
+              {t("investments_inside.form.third_select")}
+            </label>
+            <div className="flex flex-col gap-1">
+              {[
+                t("investments_inside.form.third_select_1"),
+                t("investments_inside.form.third_select_2"),
+                t("investments_inside.form.third_select_3"),
+              ].map((opt) => (
+                <label key={opt} className="flex items-center gap-2">
+                  <input type="radio" value={opt} {...register("company")} />
+                  {opt}
+                </label>
+              ))}
+            </div>
+            {errors.company && (
+              <span className="text-rose-400 text-xs">
+                {errors.company.message}
+              </span>
+            )}
+          </div>
 
           {/* Botón */}
           <div className="pt-2 flex items-center gap-3">
@@ -332,7 +417,7 @@ const InvestmentsInside1 = () => {
         </div>
       </div>
 
-      <LeadConnectorWidget className="scale-90 pt-16 " />
+      <LeadConnectorWidget className="scale-90 mt-16 " />
 
       {/* Footer + gradiente inferior */}
       <div className="absolute lg:sticky bottom-0 left-0 w-full">
