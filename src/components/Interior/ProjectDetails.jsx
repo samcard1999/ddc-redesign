@@ -179,11 +179,22 @@ export default function ProjectDetails() {
                 variants={fadeUpV}
                 className="font-semibold text-sm lg:text-lg mb-4 text-primary/80"
               >
-                <span>{project.bedrooms} </span>
-                <span>{t("project_details.bedrooms")}</span>
-                <span> ● </span>
-                <span>{project.bathrooms}</span>
-                <span> {t("project_details.bathrooms")}</span>
+                {project.areas_info ? (
+                  <span>
+                    {" "}
+                    {t(
+                      `project_details.project_description.${project.folder}.areas_info`
+                    )}{" "}
+                  </span>
+                ) : (
+                  <>
+                    <span>{project.bedrooms} </span>
+                    <span>{t("project_details.bedrooms")}</span>
+                    <span> ● </span>
+                    <span>{project.bathrooms}</span>
+                    <span> {t("project_details.bathrooms")}</span>
+                  </>
+                )}
               </motion.h2>
 
               <motion.p
