@@ -13,6 +13,8 @@ import projects from "../../data/villas.json";
 import { useLocation, useParams } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
+import { PhotoProvider, PhotoView } from "react-photo-view";
+import "react-photo-view/dist/react-photo-view.css";
 
 // ===== Variantes framer-motion (suaves y elegantes) =====
 const easeOutExpo = [0.22, 1, 0.36, 1];
@@ -224,47 +226,55 @@ export default function ProjectDetails() {
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10"
           >
             <AnimatePresence mode="popLayout">
-              {[...Array(project.total_images)].map((_, index) => {
-                const isRightEdgeLg = isLg && (index + 1) % 3 === 0;
+              <PhotoProvider>
+                {[...Array(project.total_images)].map((_, index) => {
+                  const isRightEdgeLg = isLg && (index + 1) % 3 === 0;
 
-                return (
-                  <motion.article
-                    layout
-                    key={`${project.folder}-${index}`}
-                    variants={cardV}
-                    initial="visible"
-                    className="group aspect-video p-3 relative"
-                  >
-                    <span
-                      className={`${
-                        isLg && "hidden"
-                      } left-span absolute -bottom-8 lg:-bottom-4 left-0 lg:-left-5 -translate-x-1/2 text-primary opacity-40 text-2xl`}
+                  return (
+                    <motion.article
+                      layout
+                      key={`${project.folder}-${index}`}
+                      variants={cardV}
+                      initial="visible"
+                      className="group aspect-video p-3 relative cursor-pointer"
                     >
-                      +
-                    </span>
+                      <span
+                        className={`${
+                          isLg && "hidden"
+                        } left-span absolute -bottom-8 lg:-bottom-4 left-0 lg:-left-5 -translate-x-1/2 text-primary opacity-40 text-2xl`}
+                      >
+                        +
+                      </span>
 
-                    <span
-                      className={`right-span absolute -bottom-8 lg:-bottom-8 right-0 lg:-right-5 translate-x-1/2 text-primary opacity-40 text-2xl ${
-                        isRightEdgeLg ? "no-sign" : ""
-                      }`}
-                    >
-                      +
-                    </span>
+                      <span
+                        className={`right-span absolute -bottom-8 lg:-bottom-8 right-0 lg:-right-5 translate-x-1/2 text-primary opacity-40 text-2xl ${
+                          isRightEdgeLg ? "no-sign" : ""
+                        }`}
+                      >
+                        +
+                      </span>
 
-                    <div className="overflow-hidden shadow-[0_18px_35px_-10px_rgba(0,0,0,.45)]">
-                      <img
-                        src={`/assets/images/${project.folder}/${
-                          index + 1
-                        }.jpeg`}
-                        alt={`Slide ${index + 1}`}
-                        loading="lazy"
-                        decoding="async"
-                        className="h-[180px] sm:h-[200px] md:h-[220px] lg:aspect-video lg:h-full w-full object-contain"
-                      />
-                    </div>
-                  </motion.article>
-                );
-              })}
+                      <div className="overflow-hidden shadow-[0_18px_35px_-10px_rgba(0,0,0,.45)]">
+                        <PhotoView
+                          src={`/assets/images/${project.folder}/${
+                            index + 1
+                          }.jpeg`}
+                        >
+                          <img
+                            src={`/assets/images/${project.folder}/${
+                              index + 1
+                            }.jpeg`}
+                            alt={`Slide ${index + 1}`}
+                            loading="lazy"
+                            decoding="async"
+                            className="h-[180px] sm:h-[200px] md:h-[220px] lg:aspect-video lg:h-full w-full object-contain"
+                          />
+                        </PhotoView>
+                      </div>
+                    </motion.article>
+                  );
+                })}
+              </PhotoProvider>
             </AnimatePresence>
           </motion.div>
         </motion.div>

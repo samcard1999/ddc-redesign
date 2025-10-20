@@ -208,3 +208,7 @@ textarea {
 #our-projects select option {
   @apply bg-primary text-secondary;
 }
+.PhotoView-Slider__Backdrop {
+  background: rgba(15, 25, 49, 1) !important;
+  filter: brightness(0.5);
+}
